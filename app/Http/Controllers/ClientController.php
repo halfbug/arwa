@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Client;
+use File;
 
 class ClientController extends Controller
 {
@@ -134,7 +135,7 @@ class ClientController extends Controller
             $file->move(public_path().'/document/', $name);
 			
 		
-            $request['company_docs'] = $name;
+            //$request['company_docs'] = $name;
 
             $client->update(array('company_docs' => $name));
         }
