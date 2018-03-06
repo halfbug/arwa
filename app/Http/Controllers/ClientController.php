@@ -121,13 +121,35 @@ class ClientController extends Controller
             'company_name' => 'required',
         ]);
 
+        // Upload the new image
+        if($request->hasfile('company_docs')){
+            // Delete old image
+           if($client->company_docs) { File::delete('public/document/'.$client->company_docs); }
 
+            // Image edit
+            $file = $request->file('company_docs');
+            //$image = Input::file('company_docs');
+            $name=time().$file->getClientOriginalName();
+            $file->move(public_path().'/document/', $name);
+          //Image::make($file->getRealPath())->save(public_path().'/document/', $name);
+			
+			
+            $client["company_docs"] = $name;
+
+            $client->company_docs = $name;
+        $client->update($request->all());
+        }
         $client->update($request->all());
 
-$rout="/".$client->type."s";
+/* $rout="/".$client->type."s";
         return redirect(strtolower($rout))
             ->with('success','Product updated successfully');
-    }
+ */   
+
+
+        return back()->with('success', $client->type.'updated successfully.');
+
+ }
 
     /**
      * Remove the specified resource from storage.

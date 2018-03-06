@@ -8,7 +8,7 @@
         <!-- /.col-lg-12 -->
     </div>
     <!-- /.row -->
-    <form action="{{ route('client.update',$client->id) }}" method="POST">
+    <form action="{{ route('client.update',$client->id) }}" method="POST" enctype="multipart/form-data">
         @csrf
         @method('PUT')
 
@@ -65,10 +65,10 @@
                                 <div class="form-group">
                                     <label>Gender</label>
                                     <label class="checkbox-inline">
-                                        <input type="radio" name="gender" id="optionsRadios1" value="Male" checked>Male
+									   <input type="radio" name="gender" id="optionsRadios1" value="Male" <?php echo ($client->gender=='Male')?'checked':'' ?> >Male
                                     </label>
                                     <label class="checkbox-inline">
-                                        <input type="radio" name="gender" id="optionsRadios2" value="Female">Female
+                                        <input type="radio" name="gender" id="optionsRadios2" value="Female" <?php echo ($client->gender=='Female')?'checked':'' ?> >Female
                                     </label>
                                 </div>
 
@@ -95,11 +95,11 @@
                                 </div>
                                 <div class="form-group">
                                     <label>Shipping Address</label>
-                                    <textarea class="form-control" rows="3" name="shipping_address"></textarea>
+                                    <textarea class="form-control" rows="3" name="shipping_address">{{$client->shipping_address}}</textarea>
                                 </div>
                                 <div class="form-group">
                                     <label>Billing Address</label>
-                                    <textarea class="form-control" rows="3" name="billing_address"></textarea>
+                                    <textarea class="form-control" rows="3" name="billing_address">{{$client->billing_address}}</textarea>
 
                                 </div>
 
@@ -109,7 +109,7 @@
                                     <label>Country</label>
                                     <select class="form-control" name="country">
 
-                                            <option value="Afghanistan">Afghanistan</option>
+                                            <option value="Afghanistan" <?php echo ($client->country=='Afghanistan')?'selected':''; ?> >Afghanistan</option>
                                             <option value="Albania">Albania</option>
                                             <option value="Algeria">Algeria</option>
                                             <option value="American Samoa">American Samoa</option>
@@ -228,7 +228,7 @@
                                             <option value="Kyrgyzstan">Kyrgyzstan</option>
                                             <option value="Lao">Lao People's Democratic Republic</option>
                                             <option value="Latvia">Latvia</option>
-                                            <option value="Lebanon" selected>Lebanon</option>
+                                            <option value="Lebanon">Lebanon</option>
                                             <option value="Lesotho">Lesotho</option>
                                             <option value="Liberia">Liberia</option>
                                             <option value="Libyan Arab Jamahiriya">Libyan Arab Jamahiriya</option>
@@ -272,7 +272,7 @@
                                             <option value="Northern Mariana Islands">Northern Mariana Islands</option>
                                             <option value="Norway">Norway</option>
                                             <option value="Oman">Oman</option>
-                                            <option value="Pakistan">Pakistan</option>
+                                            <option value="Pakistan" <?php echo ($client->country=='Pakistan')?'selected':''; ?> >Pakistan</option>
                                             <option value="Palau">Palau</option>
                                             <option value="Panama">Panama</option>
                                             <option value="Papua New Guinea">Papua New Guinea</option>
@@ -380,15 +380,15 @@
                                 </div>
                                 <div class="form-group">
                                     <label >Address</label>
-                                    <textarea class="form-control" rows="3" name="company_address"></textarea>
+                                    <textarea class="form-control" rows="3" name="company_address">{{$client->company_address}}</textarea>
                                 </div>
                                 <h3>Special Note</h3>
                                 <div class="form-group">
                                     <label ></label>
-                                    <textarea class="form-control" rows="16" name="special_note"></textarea>
+                                    <textarea class="form-control" rows="16" name="special_note">{{$client->special_note}}</textarea>
                                 </div>
                                 <div class="form-group">
-                                    <label>Reference Document</label>
+                                    <label>Reference Document<br><img width='100' height='100' src="{{ 'document/'.$client->company_docs}}"></label>
                                     <input type="file" name="company_docs">
                                 </div>
                                     <input type="hidden" name="type" value="{{$client->type}}">
