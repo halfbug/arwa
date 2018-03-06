@@ -128,16 +128,15 @@ class ClientController extends Controller
 
             // Image edit
             $file = $request->file('company_docs');
-            //$image = Input::file('company_docs');
+			
             $name=time().$file->getClientOriginalName();
+			
             $file->move(public_path().'/document/', $name);
-          //Image::make($file->getRealPath())->save(public_path().'/document/', $name);
 			
-			
-            $client["company_docs"] = $name;
+		
+            $request['company_docs'] = $name;
 
-            $client->company_docs = $name;
-        $client->update($request->all());
+            $client->update(array('company_docs' => $name));
         }
         $client->update($request->all());
 

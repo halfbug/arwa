@@ -388,7 +388,11 @@
                                     <textarea class="form-control" rows="16" name="special_note">{{$client->special_note}}</textarea>
                                 </div>
                                 <div class="form-group">
-                                    <label>Reference Document<br><img width='100' height='100' src="{{ 'document/'.$client->company_docs}}"></label>
+                                    <label>Reference Document
+									@if($client->company_docs)
+										<br><img width='100' height='100' src="{{ asset('document/'.$client->company_docs)}}">
+									@else <br>No document
+									@endif</label>
                                     <input type="file" name="company_docs">
                                 </div>
                                     <input type="hidden" name="type" value="{{$client->type}}">
