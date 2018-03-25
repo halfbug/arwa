@@ -107,8 +107,12 @@ class ChallanController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function destroy($id)
+    public function destroy(Challan $challan)
     {
-        //
+        $challan->delete();
+
+
+        return redirect()->route('challan.index')
+            ->with('success','Challan Record deleted successfully');
     }
 }

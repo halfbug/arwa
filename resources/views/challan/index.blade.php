@@ -39,7 +39,7 @@
                                 <td>{{date('Y-m-d',$tax->date)}}</td>
 
                                 <td class="center">
-                                    <form action="{{ route('currency-exchange.destroy',$tax->id) }}" method="POST">
+                                    <form action="{{ route('challan.destroy',$tax->id) }}" method="POST">
 
 
                                         {{--<a class="btn btn-info" href="{{ route('client.show',$vendor->id) }}">Show</a>--}}
