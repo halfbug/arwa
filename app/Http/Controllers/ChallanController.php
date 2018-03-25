@@ -40,7 +40,30 @@ class ChallanController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        request()->validate([
+            //'trader_id' => 'required',
+            'date' => 'required',
+            'challan_no' => 'required',
+            'total_amount' => 'required',
+        ]);
+        $chall = $request->all();
+        $date=date_create($chall['date']);
+        $format = date_format($date,"Y-m-d");
+        $chall['date'] = strtotime($format);
+		
+		$dateGD_date=date_create($chall['GD_date']);
+        $format1 = date_format($dateGD_date,"Y-m-d");
+        $chall['GD_date'] = strtotime($format1);
+
+		$date2=date_create($chall['payment_date']);
+        $format2 = date_format($date2,"Y-m-d");
+        $chall['payment_date'] = strtotime($format2);
+
+        Challan::create($chall);
+
+
+        return redirect()->route('challan.index')
+            ->with('success','challan has been added successfully.');
     }
 
     /**
@@ -60,9 +83,10 @@ class ChallanController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function edit($id)
+    public function edit(Challan $challan)
     {
-        //
+        $clients = Client::all();
+        return view('challan.edit', compact('challan','clients'));
     }
 
     /**

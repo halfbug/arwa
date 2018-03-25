@@ -12,9 +12,9 @@ class Challan extends Model
              * @var array
              */
             protected $fillable = [
-                'headofaccount', 'challan_no', 'B/E_GD_no','B/E_cash_no', 'clearing_agent', 'no_of_container', 'assessed_value', 'assessed_value_currency', 'gross_weight', 'net_weight', 'cass_amount_percentage',
-                'cass_amount', 'cass_amount_currency', 'amount_charged_on_distance', 'stamp_duty_on_BE', 'stamp_duty_currency',
-                'total_amount'
+                'headofaccount','trader_id','challan_no','B/E_GD_no','B/E_cash_no', 'clearing_agent', 'no_of_container', 'assessed_value', 'assessed_value_currency', 'gross_weight', 'net_weight', 'cass_amount_percentage',
+                'cass_amount', 'cass_amount_currency', 'amount_charged_on_distance', 'stamp_duty_on_BE', 'stamp_duty_currency' ,
+                'total_amount', 'date','GD_date','payment_date'
             ];
 
     /**

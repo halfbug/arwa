@@ -4,12 +4,12 @@
 
     <div class="row">
         <div class="col-lg-12">
-            <h1 class="page-header">Add Challan</h1>
+            <h1 class="page-header">Edit Challan</h1>
         </div>
         <!-- /.col-lg-12 -->
     </div>
     <!-- /.row -->
-    <form method="post" action="{{route('challan.store')}}" enctype="multipart/form-data">
+    <form method="post" action="{{route('challan.update',$challan->id)}}" enctype="multipart/form-data">
         @csrf
     <div class="row">
         <div class="col-lg-12">

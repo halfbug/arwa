@@ -25,7 +25,7 @@
                         <thead>
                         <tr>
                             <th>Name</th>
-                            <th>Value</th>
+                            <th>headofaccount</th>
                             <th>Date</th>
 
                             <th >Options</th>
@@ -34,8 +34,8 @@
                         <tbody>
                         @foreach ($challan as $tax)
                             <tr class="odd gradeX">
-                                <td>{{$tax->name}} </td>
-                                <td>{{$tax->value}}</td>
+                                <td>{{$tax->challan_no}} </td>
+                                <td>{{$tax->headofaccount}}</td>
                                 <td>{{date('Y-m-d',$tax->date)}}</td>
 
                                 <td class="center">
@@ -43,7 +43,7 @@
 
 
                                         {{--<a class="btn btn-info" href="{{ route('client.show',$vendor->id) }}">Show</a>--}}
-                                        {{--<a class="btn btn-primary" href="{{ route('sales-tax.edit',$tax->id) }}">Edit</a>--}}
+                                        <a class="btn btn-primary" href="{{ route('challan.edit',$tax->id) }}">Edit</a>
 
 
                                         @csrf
