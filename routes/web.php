@@ -44,6 +44,8 @@ Route::resource('ioperation','IoperationController');
 Route::resource('order','OrderController');
 Route::resource('challan','ChallanController');
 Route::resource('invoice','CommercialinvoiceController');
+Route::get('report','ReportController@index');
+Route::get('/report/commercial_invoice',  'ReportController@commercial_invoices');
 
 Route::get('/clientsearch',  'ClientController@dataAjax');
 //Route::get('client/search', 'Select2AutocompleteController@dataAjax');
