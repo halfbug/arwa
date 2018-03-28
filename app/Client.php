@@ -31,6 +31,9 @@ class Client extends Model
     public function shippers() {
         return $this->hasMany('App\Order','shipper','id');
     }
+    public function invoices() {
+        return $this->hasMany('App\Commercial_invoice');
+    }
 
 
 }

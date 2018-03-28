@@ -203,6 +203,9 @@
                     <li>
                         <a href="{{url('/challan')}}"><i class="fa fa-first-order fa-fw"></i> Challan</a>
                     </li>
+                    <li>
+                        <a href="{{url('/invoice')}}"><i class="fa fa-first-order fa-fw"></i> Commercial Invoice</a>
+                    </li>
                     {{--<li>--}}
                         {{--<a href="#"><i class="fa fa-sitemap fa-fw"></i> Reports<span class="fa arrow"></span></a>--}}
                         {{--<ul class="nav nav-second-level">--}}

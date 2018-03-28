@@ -43,6 +43,7 @@ Route::resource('currency-exchange','CurrencyExchangeController');
 Route::resource('ioperation','IoperationController');
 Route::resource('order','OrderController');
 Route::resource('challan','ChallanController');
+Route::resource('invoice','CommercialinvoiceController');
 
 Route::get('/clientsearch',  'ClientController@dataAjax');
 //Route::get('client/search', 'Select2AutocompleteController@dataAjax');
