@@ -34,6 +34,9 @@ class Client extends Model
     public function invoices() {
         return $this->hasMany('App\Commercial_invoice');
     }
+    public function receipts() {
+        return $this->hasMany('App\receipt');
+    }
 
 
 }
