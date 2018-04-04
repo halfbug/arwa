@@ -209,6 +209,9 @@
                     <li>
                         <a href="{{url('/report')}}"><i class="fa fa-first-order fa-fw"></i>Reports</a>
                     </li>
+                    <li>
+                        <a href="{{url('/receipt')}}"><i class="fa fa-first-order fa-fw"></i>Receipt</a>
+                    </li>
                     {{--<li>--}}
                         {{--<a href="#"><i class="fa fa-sitemap fa-fw"></i> Reports<span class="fa arrow"></span></a>--}}
                         {{--<ul class="nav nav-second-level">--}}
