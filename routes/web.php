@@ -19,42 +19,43 @@ Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
 
-Route::get('/customers', 'ClientController@customers');
+Route::get('/customers', 'ClientController@customers')->middleware('auth');
 
 Route::get('/customer/add', function () {
     return view('addCustomer');
-});
+})->middleware('auth');
 
-Route::get('/vendors',  'ClientController@vendors');
+Route::get('/vendors',  'ClientController@vendors')->middleware('auth');
 
 Route::get('/vendor/add', function () {
     return view('addVendor');
-});
+})->middleware('auth');
 
 
 
 Route::get('/currency-exchange', function () {
     return view('currencyExchange');
-});
+})->middleware('auth');
 
-Route::resource('client','ClientController');
-Route::resource('sales-tax','SalesTaxController');
-Route::resource('currency-exchange','CurrencyExchangeController');
-Route::resource('ioperation','IoperationController');
-Route::resource('order','OrderController');
-Route::resource('challan','ChallanController');
-Route::resource('invoice','CommercialinvoiceController');
-Route::resource('receipt','ReceiptController');
-Route::get('report','ReportController@index');
-Route::get('/report/commercial_invoice',  'ReportController@commercial_invoices');
-/* Route::get('/receipt',  'ReceiptController@index');
-Route::post('/receipt',  'ReceiptController@store');
-Route::get('/receipt/create',  'ReceiptController@create');
- */
+Route::resource('client','ClientController')->middleware('auth');
+Route::resource('sales-tax','SalesTaxController')->middleware('auth');
+Route::resource('currency-exchange','CurrencyExchangeController')->middleware('auth');
+Route::resource('ioperation','IoperationController')->middleware('auth');
+Route::resource('order','OrderController')->middleware('auth');
+Route::resource('challan','ChallanController')->middleware('auth');
+Route::resource('invoice','CommercialinvoiceController')->middleware('auth');
+Route::resource('receipt','ReceiptController')->middleware('auth');
+Route::resource('cashreceipt','CashPaymentReceiptController')->middleware('auth');
+Route::get('report','ReportController@index')->middleware('auth');
+Route::get('/report/commercial_invoice',  'ReportController@commercial_invoices')->middleware('auth');
+Route::get('/allreceipt', function () {
+    return view('indexall');
+})->middleware('auth');
 
 
-Route::get('/clientsearch',  'ClientController@dataAjax');
+
+Route::get('/clientsearch',  'ClientController@dataAjax')->middleware('auth');
 //Route::get('client/search', 'Select2AutocompleteController@dataAjax');
-Route::get('/ledger',  'LedgerController@index');
-Route::get('/ledger/show',  'LedgerController@show');
-Route::post('/ledger',  'LedgerController@load');
+Route::get('/ledger',  'LedgerController@index')->middleware('auth');
+Route::get('/ledger/show',  'LedgerController@show')->middleware('auth');
+Route::post('/ledger',  'LedgerController@load')->middleware('auth');
