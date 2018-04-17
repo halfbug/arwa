@@ -210,7 +210,7 @@
                         <a href="{{url('/report')}}"><i class="fa fa-first-order fa-fw"></i>Reports</a>
                     </li>
                     <li>
-                        <a href="{{url('/allreceipt')}}"><i class="fa fa-first-order fa-fw"></i>All Receipt</a>
+                        <a href="{{url('/allreceipt')}}"><i class="fa fa-first-order fa-fw"></i>All Receipt n Bills</a>
                     </li>
                     {{--<li>
                         <a href="{{url('/cashreceipt')}}"><i class="fa fa-first-order fa-fw"></i>Cash Payment Receipt</a>

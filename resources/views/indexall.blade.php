@@ -39,6 +39,13 @@
                                         <a class="btn btn-primary" href="{{ route('cashreceipt.create') }}">Create</a>
                                 </td>
                             </tr>
+                            <tr class="odd gradeX">
+                                <td>Bill</td>
+                                <td class="center">
+                                <a class="btn btn-info" href="{{ route('bill.index') }}">Show All</a>
+                                        <a class="btn btn-primary" href="{{ route('bill.create') }}">Create</a>
+                                </td>
+                            </tr>
                         </tbody>
                     </table>
                     <!-- /.table-responsive -->

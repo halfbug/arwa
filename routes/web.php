@@ -46,6 +46,7 @@ Route::resource('challan','ChallanController')->middleware('auth');
 Route::resource('invoice','CommercialinvoiceController')->middleware('auth');
 Route::resource('receipt','ReceiptController')->middleware('auth');
 Route::resource('cashreceipt','CashPaymentReceiptController')->middleware('auth');
+Route::resource('bill','BillController')->middleware('auth');
 Route::get('report','ReportController@index')->middleware('auth');
 Route::get('/report/commercial_invoice',  'ReportController@commercial_invoices')->middleware('auth');
 Route::get('/allreceipt', function () {
