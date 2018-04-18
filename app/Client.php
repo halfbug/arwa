@@ -40,6 +40,12 @@ class Client extends Model
     public function bills() {
         return $this->hasMany('App\Bills');
     }
+    public function consignor() {
+        return $this->hasMany('App\GoodDeclaration','consignor_id','id');
+    }
+    public function consignee() {
+        return $this->hasMany('App\GoodDeclaration','consignee_id','id');
+    }
 
 
 }

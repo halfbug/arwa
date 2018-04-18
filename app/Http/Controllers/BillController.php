@@ -101,9 +101,9 @@ class BillController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Bill $bid)
+    public function destroy(Bill $bill)
     {
-        $bid->delete();
+        $bill->delete();
         return redirect()->route('bill.index')
             ->with('success','bill deleted successfully');
     }

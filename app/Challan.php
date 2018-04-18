@@ -17,8 +17,12 @@ class Challan extends Model
                 'total_amount', 'date','GD_date','payment_date'
             ];
 
-    /**
-     * Get the associated sales tax
+      public function gds()
+    {
+        return $this->belongsTo('App\GoodDeclaration','challan_id','id');
+    }
+   /**
+    * Get the associated sales tax
      *
      * @var array
      
