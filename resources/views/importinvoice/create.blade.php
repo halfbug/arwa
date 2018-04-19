@@ -66,280 +66,295 @@
 									</select>
 
 								</div>
-                                <div class="form-group">
-                                    <label >type</label>
-									<select name="type" class="form-control">
-                                    <option value="Bill of Entry">Bill of Entry</option>
-                                    <option value="Bill of Export">Bill of Export</option>
-                                    <option value="Baggage Declaration">Baggage Declaration</option>
-                                    <option value="Transshipment Permit">Transshipment Permit</option>
-									</select>
-                                </div>
 
                                 <div class="form-group">
-                                    <label>customfileno</label>
-                                    <input class="form-control" id="customfileno" placeholder="" name="customfileno">
+                                    <label>salestax_reg_no</label>
+                                    <input class="form-control" id="salestax_reg_no" placeholder="" name="salestax_reg_no">
 
                                 </div>
                                  <div class="form-group">
-                                    <label >declaration_type</label>
-                                    <input class="form-control" id="declaration_type" placeholder="" name="declaration_type">
+                                    <label >invoice num</label>
+                                    <input class="form-control" id="invoice_no" placeholder="" name="invoice_no">
                                 </div>
                                 <div class="form-group">
-                                    <label>valuation_method</label>
-                                    <input class="form-control" placeholder="Enter text" name="valuation_method">
+                                    <label>Invoice date</label>
+                                    <input class="form-control" placeholder="Enter text" id="date1" name="invoice_date">
                                 </div>
                                 <div class="form-group">
-                                    <label>prev_ref</label>
-                                    <input class="form-control" placeholder="Enter text" name="prev_ref">
+                                    <label>ref_no</label>
+                                    <input class="form-control" placeholder="Enter text" name="ref_no">
                                 </div>
                                 <div class="form-group">
-                                    <label>custom_ofc</label>
-                                    <input class="form-control" placeholder="Enter text" name="custom_ofc">
+                                    <label>exchangerate</label>
+                                    <input class="form-control" placeholder="Enter text" name="exchangerate">
                                 </div>
                                 <div class="form-group">
-                                    <label>bankcode</label>
-                                    <input class="form-control" placeholder="Enter text" name="bankcode">
+                                    <label>bl_no</label>
+                                    <input class="form-control" placeholder="Enter text" name="bl_no">
                                 </div>
                                 <div class="form-group">
-                                    <label>igm_egm_no</label>
-                                    <input class="form-control" placeholder="Enter text" name="igm_egm_no">
-                                    <label>igm_egm_index</label>
-                                    <input class="form-control" placeholder="Enter text" name="igm_egm_index">
-                                    <label>igm_egm_date</label>
-                                    <input class="form-control" placeholder="Enter text" id="date2" name="igm_egm_date">
+                                    <label>ntn_no</label>
+                                    <input class="form-control" placeholder="Enter text" name="ntn_no">
+                                    <label>salestax_no</label>
+                                    <input class="form-control" placeholder="Enter text" name="salestax_no">
+                                    <label>tax_counter_no</label>
+                                    <input class="form-control" placeholder="Enter text" name="tax_counter_no">
                                 </div>
                                 <div class="form-group">
-                                    <label>dry_port_igm_egm</label>
-                                    <input class="form-control" placeholder="Enter text" name="dry_port_igm_egm">
-                                    <label>dry_port_igm_egm_index</label>
-                                    <input class="form-control" placeholder="Enter text" name="dry_port_igm_egm_index">
-                                    <label>dry_port_igm_egm_date</label>
-                                    <input id="date1" class="form-control" placeholder="Enter text" name="dry_port_igm_egm_date">
+                                    <label>vesselname</label>
+                                    <input class="form-control" placeholder="Enter text" name="vesselname">
+                                    <label>voyage_no</label>
+                                    <input class="form-control" placeholder="Enter text" name="voyage_no">
+                                    <label>vir_no</label>
+                                    <input id="date1" class="form-control" placeholder="Enter text" name="vir_no">
                                 </div>
                                 <div class="form-group">
-                                    <label>declarant</label>
-                                    <input class="form-control" placeholder="Enter text" name="declarant" id="declarant">
+                                    <label >container_no</label>
+                                    <input class="form-control" placeholder="" name="container_no">
+                                    <label >container_size</label>
+                                    <input class="form-control" placeholder="" name="container_size">
+                                    <label >container_demurragedate</label>
+                                    <input class="form-control" placeholder="" name="container_demurragedate">
+                                    <label >container_demurrageupto</label>
+                                    <input class="form-control" placeholder="" name="container_demurrageupto">
+                                    <label >container_status</label>
+                                    <input class="form-control" placeholder="" name="container_status">
+                                    <label >container_releasedt</label>
+                                    <input class="form-control" placeholder="" name="container_releasedt">
+                                    <label >container_no_ofdays</label>
+                                    <input class="form-control" placeholder="" name="container_no_ofdays">
+                                    <label >container_machineno</label>
+                                    <input class="form-control" placeholder="" name="container_machineno">
                                 </div>
                                 <div class="form-group">
-                                    <label>telephone</label>
-                                    <input class="form-control" placeholder="Enter text" name="telephone">
-                                    <label>job_no</label>
-                                    <input class="form-control" placeholder="Enter text" name="job_no">
-
-                                </div>
-
-                                <div class="form-group">
-                                    <label >NTN</label>
-                                    <input class="form-control" placeholder="" name="NTN">
+                                    <label >totalval_ex_stax_fed</label>
+                                    <input class="form-control" placeholder="" name="totalval_ex_stax_fed">
                                 </div>
                                 <div class="form-group">
-                                    <label >STRno_passport_n_date</label>
-                                    <input class="form-control" placeholder="" name="STRno_passport_n_date">
+                                    <label >provisional sales tax</label>
+                                    <input class="form-control" placeholder="" name="prov_sales_tax">
                                 </div>
                                 <div class="form-group">
-                                    <label >warehouse_lic_no</label>
-                                    <input class="form-control" placeholder="" name="warehouse_lic_no">
+                                    <label >Total invoice amount</label>
+                                    <input class="form-control" placeholder="" name="totalinvoiceamount">
                                 </div>
                                 <div class="form-group">
-                                    <label >transaction_type</label>
-                                    <input class="form-control" placeholder="" name="transaction_type">
+                                    <label >Receipt No.</label>
+                                    <input class="form-control" placeholder="" name="receiptno">
                                 </div>
                                 <div class="form-group">
-                                    <label >lc_dd_no_date</label>
-                                    <input class="form-control" placeholder="" name="lc_dd_no_date">
+                                    <label >Receipt date</label>
+                                    <input class="form-control" placeholder="" name="receiptno">
                                 </div>
                                 <div class="form-group">
-                                    <label >country_destination</label>
-                                    <input class="form-control" placeholder="" name="country_destination">
+                                    <label >Demurrage Charges</label>
+                                    <input class="form-control" placeholder="demurrage_charges_paid_at" name="demurrage_charges_paid_at">
+                                    <input class="form-control" placeholder="demurrage_charges_20" name="demurrage_charges_20">
+                                    <input class="form-control" placeholder="demurrage_charges_40" name="demurrage_charges_40">
+                                    <input class="form-control" placeholder="demurrage_charges_45" name="demurrage_charges_45">
+                                    <input class="form-control" placeholder="demurrage_charges_amount_usd" name="demurrage_charges_amount_usd">
+                                    <input class="form-control" placeholder="demurrage_charges_amount_pkr" name="demurrage_charges_amount_pkr">
+                                    <input class="form-control" placeholder="demurrage_charges_discount_amount" name="demurrage_charges_discount_amount">
+                                    <input class="form-control" placeholder="demurrage_charges_value_excld" name="demurrage_charges_value_excld">
+                                    <input class="form-control" placeholder="demurrage_charges_ST_n_fed" name="demurrage_charges_ST_n_fed">
+                                    <input class="form-control" placeholder="demurrage_charges_provisionalsalestaxamount" name="demurrage_charges_provisionalsalestaxamount">
+                                    <input class="form-control" placeholder="demurrage_charges_value_inc_tax" name="demurrage_charges_value_inc_tax">
                                 </div>
                                 <div class="form-group">
-                                    <label >curr_name_code</label>
-                                    <input class="form-control" placeholder="" name="curr_name_code">
+                                    <label >Storage Charges</label>
+                                    <input class="form-control" placeholder="storage_charges_paid_at" name="storage_charges_paid_at">
+                                    <input class="form-control" placeholder="storage_charges_20" name="storage_charges_20">
+                                    <input class="form-control" placeholder="storage_charges_40" name="storage_charges_40">
+                                    <input class="form-control" placeholder="storage_charges_45" name="storage_charges_45">
+                                    <input class="form-control" placeholder="storage_charges_amount_usd" name="storage_charges_amount_usd">
+                                    <input class="form-control" placeholder="storage_charges_amount_pkr" name="storage_charges_amount_pkr">
+                                    <input class="form-control" placeholder="storage_charges_discount_amount" name="storage_charges_discount_amount">
+                                    <input class="form-control" placeholder="storage_charges_value_excld" name="storage_charges_value_excld">
+                                    <input class="form-control" placeholder="storage_charges_ST_n_fed" name="storage_charges_ST_n_fed">
+                                    <input class="form-control" placeholder="storage_charges_provisionalsalestaxamount" name="storage_charges_provisionalsalestaxamount">
+                                    <input class="form-control" placeholder="storage_charges_value_inc_tax" name="storage_charges_value_inc_tax">
                                 </div>
                                 <div class="form-group">
-                                    <label >vessel_mode_of_transport</label>
-                                    <input class="form-control" placeholder="" name="vessel_mode_of_transport">
+                                    <label >Wharfage Charges</label>
+                                    <input class="form-control" placeholder="wharfage_charges_paid_at" name="wharfage_charges_paid_at">
+                                    <input class="form-control" placeholder="wharfage_charges_20" name="wharfage_charges_20">
+                                    <input class="form-control" placeholder="wharfage_charges_40" name="wharfage_charges_40">
+                                    <input class="form-control" placeholder="wharfage_charges_45" name="wharfage_charges_45">
+                                    <input class="form-control" placeholder="wharfage_charges_amount_usd" name="wharfage_charges_amount_usd">
+                                    <input class="form-control" placeholder="wharfage_charges_amount_pkr" name="wharfage_charges_amount_pkr">
+                                    <input class="form-control" placeholder="wharfage_charges_discount_amount" name="wharfage_charges_discount_amount">
+                                    <input class="form-control" placeholder="wharfage_charges_value_excld" name="wharfage_charges_value_excld">
+                                    <input class="form-control" placeholder="wharfage_charges_ST_n_fed" name="wharfage_charges_ST_n_fed">
+                                    <input class="form-control" placeholder="wharfage_charges_provisionalsalestaxamount" name="wharfage_charges_provisionalsalestaxamount">
+                                    <input class="form-control" placeholder="wharfage_charges_value_inc_tax" name="wharfage_charges_value_inc_tax">
                                 </div>
                                 <div class="form-group">
-                                    <label >bl_awl_con_no_date</label>
-                                    <input class="form-control" placeholder="" name="bl_awl_con_no_date">
+                                    <label >Terminal Service Charges</label>
+                                    <input class="form-control" placeholder="terminalservice_paid_at" name="terminalservice_paid_at">
+                                    <input class="form-control" placeholder="terminalservice_20" name="terminalservice_20">
+                                    <input class="form-control" placeholder="terminalservice_40" name="terminalservice_40">
+                                    <input class="form-control" placeholder="terminalservice_45" name="terminalservice_45">
+                                    <input class="form-control" placeholder="terminalservice_amount_usd" name="terminalservice_amount_usd">
+                                    <input class="form-control" placeholder="terminalservice_amount_pkr" name="terminalservice_amount_pkr">
+                                    <input class="form-control" placeholder="terminalservice_discount_amount" name="terminalservice_discount_amount">
+                                    <input class="form-control" placeholder="terminalservice_value_excld" name="terminalservice_value_excld">
+                                    <input class="form-control" placeholder="terminalservice_ST_n_fed" name="terminalservice_ST_n_fed">
+                                    <input class="form-control" placeholder="terminalservice_provisionalsalestaxamount" name="terminalservice_provisionalsalestaxamount">
+                                    <input class="form-control" placeholder="terminalservice_value_inc_tax" name="terminalservice_value_inc_tax">
                                 </div>
                                 <div class="form-group">
-                                    <label >exchangerate</label>
-                                    <input class="form-control" placeholder="" name="exchangerate">
-                                </div>
-                                <div class="form-group">
-                                    <label >portofshipment</label>
-                                    <input class="form-control" placeholder="" name="portofshipment">
-                                </div>
-                                <div class="form-group">
-                                    <label >portofdischarge</label>
-                                    <input class="form-control" placeholder="" name="portofdischarge">
-                                </div>
-                                <div class="form-group">
-                                    <label >placeofdelivery</label>
-                                    <input class="form-control" placeholder="" name="placeofdelivery">
-                                </div>
-                                <div class="form-group">
-                                    <label >deliveryterms</label>
-                                    <input class="form-control" placeholder="" name="deliveryterms">
+                                    <label >Documents Charges</label>
+                                    <input class="form-control" placeholder="docs_charges_paid_at" name="docs_charges_paid_at">
+                                    <input class="form-control" placeholder="docs_charges_20" name="docs_charges_20">
+                                    <input class="form-control" placeholder="docs_charges_40" name="docs_charges_40">
+                                    <input class="form-control" placeholder="docs_charges_45" name="docs_charges_45">
+                                    <input class="form-control" placeholder="docs_charges_amount_usd" name="docs_charges_amount_usd">
+                                    <input class="form-control" placeholder="docs_charges_amount_pkr" name="docs_charges_amount_pkr">
+                                    <input class="form-control" placeholder="docs_charges_discount_amount" name="docs_charges_discount_amount">
+                                    <input class="form-control" placeholder="docs_charges_value_excld" name="docs_charges_value_excld">
+                                    <input class="form-control" placeholder="docs_charges_ST_n_fed" name="docs_charges_ST_n_fed">
+                                    <input class="form-control" placeholder="docs_charges_provisionalsalestaxamount" name="docs_charges_provisionalsalestaxamount">
+                                    <input class="form-control" placeholder="docs_charges_value_inc_tax" name="docs_charges_value_inc_tax">
                                 </div>
 
                             </div>
                             <!-- /.col-lg-6 (nested) -->
                             <div class="col-lg-6">
                                 <div class="form-group">
-                                    <label >marks_container_no</label>
-                                    <input class="form-control" placeholder="" name="marks_container_no">
+                                    <label >Truck In Charges</label>
+                                    <input class="form-control" placeholder="truck_in_charges_paid_at" name="truck_in_charges_paid_at">
+                                    <input class="form-control" placeholder="truck_in_charges_20" name="truck_in_charges_20">
+                                    <input class="form-control" placeholder="truck_in_charges_40" name="truck_in_charges_40">
+                                    <input class="form-control" placeholder="truck_in_charges_45" name="truck_in_charges_45">
+                                    <input class="form-control" placeholder="truck_in_charges_amount_usd" name="truck_in_charges_amount_usd">
+                                    <input class="form-control" placeholder="truck_in_charges_amount_pkr" name="truck_in_charges_amount_pkr">
+                                    <input class="form-control" placeholder="truck_in_charges_discount_amount" name="truck_in_charges_discount_amount">
+                                    <input class="form-control" placeholder="truck_in_charges_value_excld" name="truck_in_charges_value_excld">
+                                    <input class="form-control" placeholder="truck_in_charges_ST_n_fed" name="truck_in_charges_ST_n_fed">
+                                    <input class="form-control" placeholder="truck_in_charges_provisionalsalestaxamount" name="truck_in_charges_provisionalsalestaxamount">
+                                    <input class="form-control" placeholder="truck_in_charges_value_inc_tax" name="truck_in_charges_value_inc_tax">
                                 </div>
                                 <div class="form-group">
-                                    <label >no_of_package</label>
-                                    <input class="form-control" placeholder="" name="no_of_package">
+                                    <label >Scanner Infastructure Charges</label>
+                                    <input class="form-control" placeholder="scanner_infstrc_charges_paid_at" name="scanner_infstrc_charges_paid_at">
+                                    <input class="form-control" placeholder="scanner_infstrc_charges_20" name="scanner_infstrc_charges_20">
+                                    <input class="form-control" placeholder="scanner_infstrc_charges_40" name="scanner_infstrc_charges_40">
+                                    <input class="form-control" placeholder="scanner_infstrc_charges_45" name="scanner_infstrc_charges_45">
+                                    <input class="form-control" placeholder="scanner_infstrc_charges_amount_usd" name="scanner_infstrc_charges_amount_usd">
+                                    <input class="form-control" placeholder="scanner_infstrc_charges_amount_pkr" name="scanner_infstrc_charges_amount_pkr">
+                                    <input class="form-control" placeholder="scanner_infstrc_charges_discount_amount" name="scanner_infstrc_charges_discount_amount">
+                                    <input class="form-control" placeholder="scanner_infstrc_charges_value_excld" name="scanner_infstrc_charges_value_excld">
+                                    <input class="form-control" placeholder="scanner_infstrc_charges_ST_n_fed" name="scanner_infstrc_charges_ST_n_fed">
+                                    <input class="form-control" placeholder="scanner_infstrc_charges_provisionalsalestaxamount" name="scanner_infstrc_charges_provisionalsalestaxamount">
+                                    <input class="form-control" placeholder="scanner_infstrc_charges_value_inc_tax" name="scanner_infstrc_charges_value_inc_tax">
                                 </div>
                                 <div class="form-group">
-                                    <label >package_type</label>
-                                    <input class="form-control" placeholder="" name="package_type">
+                                    <label >Fuel Surcharge Charges</label>
+                                    <input class="form-control" placeholder="fuelsurcharge_charges_paid_at" name="fuelsurcharge_charges_paid_at">
+                                    <input class="form-control" placeholder="fuelsurcharge_charges_20" name="fuelsurcharge_charges_20">
+                                    <input class="form-control" placeholder="fuelsurcharge_charges_40" name="fuelsurcharge_charges_40">
+                                    <input class="form-control" placeholder="fuelsurcharge_charges_45" name="fuelsurcharge_charges_45">
+                                    <input class="form-control" placeholder="fuelsurcharge_charges_amount_usd" name="fuelsurcharge_charges_amount_usd">
+                                    <input class="form-control" placeholder="fuelsurcharge_charges_amount_pkr" name="fuelsurcharge_charges_amount_pkr">
+                                    <input class="form-control" placeholder="fuelsurcharge_charges_discount_amount" name="fuelsurcharge_charges_discount_amount">
+                                    <input class="form-control" placeholder="fuelsurcharge_charges_value_excld" name="fuelsurcharge_charges_value_excld">
+                                    <input class="form-control" placeholder="fuelsurcharge_charges_ST_n_fed" name="fuelsurcharge_charges_ST_n_fed">
+                                    <input class="form-control" placeholder="fuelsurcharge_charges_provisionalsalestaxamount" name="fuelsurcharge_charges_provisionalsalestaxamount">
+                                    <input class="form-control" placeholder="fuelsurcharge_charges_value_inc_tax" name="fuelsurcharge_charges_value_inc_tax">
                                 </div>
                                 <div class="form-group">
-                                    <label >gross weight</label>
-                                    <input class="form-control" placeholder="" name="groswt">
+                                    <label >Data Processing Charges</label>
+                                    <input class="form-control" placeholder="datapro_charges_paid_at" name="datapro_charges_paid_at">
+                                    <input class="form-control" placeholder="datapro_charges_20" name="datapro_charges_20">
+                                    <input class="form-control" placeholder="datapro_charges_40" name="datapro_charges_40">
+                                    <input class="form-control" placeholder="datapro_charges_45" name="datapro_charges_45">
+                                    <input class="form-control" placeholder="datapro_charges_amount_usd" name="datapro_charges_amount_usd">
+                                    <input class="form-control" placeholder="datapro_charges_amount_pkr" name="datapro_charges_amount_pkr">
+                                    <input class="form-control" placeholder="datapro_charges_discount_amount" name="datapro_charges_discount_amount">
+                                    <input class="form-control" placeholder="datapro_charges_value_excld" name="datapro_charges_value_excld">
+                                    <input class="form-control" placeholder="datapro_charges_ST_n_fed" name="datapro_charges_ST_n_fed">
+                                    <input class="form-control" placeholder="datapro_charges_provisionalsalestaxamount" name="datapro_charges_provisionalsalestaxamount">
+                                    <input class="form-control" placeholder="datapro_charges_value_inc_tax" name="datapro_charges_value_inc_tax">
                                 </div>
                                 <div class="form-group">
-                                    <label >net weight</label>
-                                    <input class="form-control" placeholder="" name="netwt">
+                                    <label >Scanning Examination Charges</label>
+                                    <input class="form-control" placeholder="scanning_exm_charges_paid_at" name="scanning_exm_charges_paid_at">
+                                    <input class="form-control" placeholder="scanning_exm_charges_20" name="scanning_exm_charges_20">
+                                    <input class="form-control" placeholder="scanning_exm_charges_40" name="scanning_exm_charges_40">
+                                    <input class="form-control" placeholder="scanning_exm_charges_45" name="scanning_exm_charges_45">
+                                    <input class="form-control" placeholder="scanning_exm_charges_amount_usd" name="scanning_exm_charges_amount_usd">
+                                    <input class="form-control" placeholder="scanning_exm_charges_amount_pkr" name="scanning_exm_charges_amount_pkr">
+                                    <input class="form-control" placeholder="scanning_exm_charges_discount_amount" name="scanning_exm_charges_discount_amount">
+                                    <input class="form-control" placeholder="scanning_exm_charges_value_excld" name="scanning_exm_charges_value_excld">
+                                    <input class="form-control" placeholder="scanning_exm_charges_ST_n_fed" name="scanning_exm_charges_ST_n_fed">
+                                    <input class="form-control" placeholder="scanning_exm_charges_provisionalsalestaxamount" name="scanning_exm_charges_provisionalsalestaxamount">
+                                    <input class="form-control" placeholder="scanning_exm_charges_value_inc_tax" name="scanning_exm_charges_value_inc_tax">
                                 </div>
                                 <div class="form-group">
-                                    <label >volume</label>
-                                    <input class="form-control" placeholder="" name="volume">
+                                    <label >Custom Seal Charges</label>
+                                    <input class="form-control" placeholder="custom_seal_charges_paid_at" name="custom_seal_charges_paid_at">
+                                    <input class="form-control" placeholder="custom_seal_charges_20" name="custom_seal_charges_20">
+                                    <input class="form-control" placeholder="custom_seal_charges_40" name="custom_seal_charges_40">
+                                    <input class="form-control" placeholder="custom_seal_charges_45" name="custom_seal_charges_45">
+                                    <input class="form-control" placeholder="custom_seal_charges_amount_usd" name="custom_seal_charges_amount_usd">
+                                    <input class="form-control" placeholder="custom_seal_charges_amount_pkr" name="custom_seal_charges_amount_pkr">
+                                    <input class="form-control" placeholder="custom_seal_charges_discount_amount" name="custom_seal_charges_discount_amount">
+                                    <input class="form-control" placeholder="custom_seal_charges_value_excld" name="custom_seal_charges_value_excld">
+                                    <input class="form-control" placeholder="custom_seal_charges_ST_n_fed" name="custom_seal_charges_ST_n_fed">
+                                    <input class="form-control" placeholder="custom_seal_charges_provisionalsalestaxamount" name="custom_seal_charges_provisionalsalestaxamount">
+                                    <input class="form-control" placeholder="custom_seal_charges_value_inc_tax" name="custom_seal_charges_value_inc_tax">
                                 </div>
                                 <div class="form-group">
-                                    <label >itemno</label>
-                                    <input class="form-control" placeholder="" name="itemno">
+                                    <label >Survey Charges</label>
+                                    <input class="form-control" placeholder="survey_charges_paid_at" name="survey_charges_paid_at">
+                                    <input class="form-control" placeholder="survey_charges_20" name="survey_charges_20">
+                                    <input class="form-control" placeholder="survey_charges_40" name="survey_charges_40">
+                                    <input class="form-control" placeholder="survey_charges_45" name="survey_charges_45">
+                                    <input class="form-control" placeholder="survey_charges_amount_usd" name="survey_charges_amount_usd">
+                                    <input class="form-control" placeholder="survey_charges_amount_pkr" name="survey_charges_amount_pkr">
+                                    <input class="form-control" placeholder="survey_charges_discount_amount" name="survey_charges_discount_amount">
+                                    <input class="form-control" placeholder="survey_charges_value_excld" name="survey_charges_value_excld">
+                                    <input class="form-control" placeholder="survey_charges_ST_n_fed" name="survey_charges_ST_n_fed">
+                                    <input class="form-control" placeholder="survey_charges_provisionalsalestaxamount" name="survey_charges_provisionalsalestaxamount">
+                                    <input class="form-control" placeholder="survey_charges_value_inc_tax" name="survey_charges_value_inc_tax">
                                 </div>
                                 <div class="form-group">
-                                    <label >quantity_unit</label>
-                                    <input class="form-control" placeholder="" name="quantity_unit">
+                                    <label >Bullet Seal Affixing</label>
+                                    <input class="form-control" placeholder="bulletseal_affix_charges_paid_at" name="bulletseal_affix_charges_paid_at">
+                                    <input class="form-control" placeholder="bulletseal_affix_charges_20" name="bulletseal_affix_charges_20">
+                                    <input class="form-control" placeholder="bulletseal_affix_charges_40" name="bulletseal_affix_charges_40">
+                                    <input class="form-control" placeholder="bulletseal_affix_charges_45" name="bulletseal_affix_charges_45">
+                                    <input class="form-control" placeholder="bulletseal_affix_charges_amount_usd" name="bulletseal_affix_charges_amount_usd">
+                                    <input class="form-control" placeholder="bulletseal_affix_charges_amount_pkr" name="bulletseal_affix_charges_amount_pkr">
+                                    <input class="form-control" placeholder="bulletseal_affix_charges_discount_amount" name="bulletseal_affix_charges_discount_amount">
+                                    <input class="form-control" placeholder="bulletseal_affix_charges_value_excld" name="bulletseal_affix_charges_value_excld">
+                                    <input class="form-control" placeholder="bulletseal_affix_charges_ST_n_fed" name="bulletseal_affix_charges_ST_n_fed">
+                                    <input class="form-control" placeholder="bulletseal_affix_charges_provisionalsalestaxamount" name="bulletseal_affix_charges_provisionalsalestaxamount">
+                                    <input class="form-control" placeholder="bulletseal_affix_charges_value_inc_tax" name="bulletseal_affix_charges_value_inc_tax">
                                 </div>
                                 <div class="form-group">
-                                    <label >no_of_unit</label>
-                                    <input class="form-control" placeholder="" name="no_of_unit">
-                                </div>
-                                <div class="form-group">
-                                    <label >CO_code</label>
-                                    <input class="form-control" placeholder="" name="CO_code">
-                                </div>
-                                <div class="form-group">
-                                    <label >sro_no</label>
-                                    <input class="form-control" placeholder="" name="sro_no">
-                                </div>
-                                <div class="form-group">
-                                    <label >hscode</label>
-                                    <input class="form-control" placeholder="" name="hscode">
-                                </div>
-                                 <div class="form-group">
-                                    <label>items_desc</label>
-                                    <textarea class="form-control" rows="2" style="height: 60px"  name="items_desc" id=""></textarea>
-                                </div>
-                               <div class="form-group">
-                                    <label >levy</label>
-                                    <input class="form-control" placeholder="" name="levy">
-                                </div>
-                                <div class="form-group">
-                                    <label >rate</label>
-                                    <input class="form-control" placeholder="" name="rate">
-                                </div>
-                                <div class="form-group">
-                                    <label >sumpayable_pkr</label>
-                                    <input class="form-control" placeholder="" name="sumpayable_pkr">
-                                </div>
-                                <div class="form-group">
-                                    <label >unitvalue_declared</label>
-                                    <input class="form-control" placeholder="" name="unitvalue_declared">
-                                </div>
-                                <div class="form-group">
-                                    <label >unitvalue_assessed</label>
-                                    <input class="form-control" placeholder="" name="unitvalue_assessed">
-                                </div>
-                                <div class="form-group">
-                                    <label >totalvalue_declared</label>
-                                    <input class="form-control" placeholder="" name="totalvalue_declared">
-                                </div>
-                                <div class="form-group">
-                                    <label >totalvalue_assessed</label>
-                                    <input class="form-control" placeholder="" name="totalvalue_assessed">
-                                </div>
-                                <div class="form-group">
-                                    <label >customvalue_declared_pkr</label>
-                                    <input class="form-control" placeholder="" name="customvalue_declared_pkr">
-                                </div>
-                                <div class="form-group">
-                                    <label >customvalue_assessed_pkr</label>
-                                    <input class="form-control" placeholder="" name="customvalue_assessed_pkr">
-                                </div>
-                                <div class="form-group">
-                                    <label>sro_test_report_no_date</label>
-                                    <textarea class="form-control" rows="2" style="height: 50px"  name="sro_test_report_no_date" id=""></textarea>
-                                </div>
-                                <div class="form-group">
-                                    <label >fobvalue</label>
-                                    <input class="form-control" placeholder="" name="fobvalue">
-                                </div>
-                                <div class="form-group">
-                                    <label >freight</label>
-                                    <input class="form-control" placeholder="" name="freight">
-                                </div>
-                                <div class="form-group">
-                                    <label >cfrvalue</label>
-                                    <input class="form-control" placeholder="" name="cfrvalue">
-                                </div>
-                                <div class="form-group">
-                                    <label >insurance</label>
-                                    <input class="form-control" placeholder="" name="insurance">
-                                </div>
-                                <div class="form-group">
-                                    <label >landingcharges_on_1perc</label>
-                                    <input class="form-control" placeholder="" name="landingcharges_on_1perc">
-                                </div>
-                                <div class="form-group">
-                                    <label >othercharges</label>
-                                    <input class="form-control" placeholder="" name="othercharges">
-                                </div>
-                                <div class="form-group">
-                                    <label >assessedval_pkr</label>
-                                    <input class="form-control" placeholder="" name="assessedval_pkr">
-                                </div>
-                                <div class="form-group">
-                                    <label >total_claim_pkr</label>
-                                    <input class="form-control" placeholder="" name="total_claim_pkr">
-                                </div>
-                                <div class="form-group">
-                                    <label>machineno_date</label>
-                                    <textarea class="form-control" rows="2" style="height: 60px"  name="machineno_date" id=""></textarea>
-                                </div>
-                                <div class="form-group">
-                                    <label>rev_recover</label>
-                                    <textarea class="form-control" rows="2" style="height: 60px"  name="rev_recover" id=""></textarea>
-                                </div>
-                                <div class="form-group">
-                                    <label >amount</label>
-                                    <input class="form-control" placeholder="" name="amount">
-                                </div>
-                                <div class="form-group">
-                                    <label >totalamount</label>
-                                    <input class="form-control" placeholder="totalamount" name="totalamount">
-                                </div>
-                                <div class="form-group">
-                                    <label>cfo_no_date</label>
-                                    <textarea class="form-control" rows="2" style="height: 60px"  name="cfo_no_date" id=""></textarea>
+                                    <label >Weighment Charges</label>
+                                    <input class="form-control" placeholder="weighment_charges_paid_at" name="weighment_charges_paid_at">
+                                    <input class="form-control" placeholder="weighment_charges_20" name="weighment_charges_20">
+                                    <input class="form-control" placeholder="weighment_charges_40" name="weighment_charges_40">
+                                    <input class="form-control" placeholder="weighment_charges_45" name="weighment_charges_45">
+                                    <input class="form-control" placeholder="weighment_charges_amount_usd" name="weighment_charges_amount_usd">
+                                    <input class="form-control" placeholder="weighment_charges_amount_pkr" name="weighment_charges_amount_pkr">
+                                    <input class="form-control" placeholder="weighment_charges_discount_amount" name="weighment_charges_discount_amount">
+                                    <input class="form-control" placeholder="weighment_charges_value_excld" name="weighment_charges_value_excld">
+                                    <input class="form-control" placeholder="weighment_charges_ST_n_fed" name="weighment_charges_ST_n_fed">
+                                    <input class="form-control" placeholder="weighment_charges_provisionalsalestaxamount" name="weighment_charges_provisionalsalestaxamount">
+                                    <input class="form-control" placeholder="weighment_charges_value_inc_tax" name="weighment_charges_value_inc_tax">
                                 </div>
 
-                            </div>
-                            <!-- /.col-lg-6 (nested) -->
-                        </div>
+
+							</div><!-- /.2nd col  -->
+
+
+							</div>
                         <!-- /.row (nested) -->
+						
 
-                    </div>
                     <!-- /.panel-body -->
                     <div class="panel-footer">
                         <div class="row">
@@ -382,10 +397,6 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.5.0/js/bootstrap-datepicker.js"></script>
     <script type="text/javascript">
         $('#date1').datepicker({
-            autoclose: true,
-            format: 'dd-mm-yyyy'
-        });
-        $('#date2').datepicker({
             autoclose: true,
             format: 'dd-mm-yyyy'
         });
