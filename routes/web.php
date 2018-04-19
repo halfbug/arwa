@@ -48,6 +48,7 @@ Route::resource('receipt','ReceiptController')->middleware('auth');
 Route::resource('cashreceipt','CashPaymentReceiptController')->middleware('auth');
 Route::resource('bill','BillController')->middleware('auth');
 Route::resource('goods','GoodDeclarationController')->middleware('auth');
+Route::resource('importinvoice','ImportInvoiceController')->middleware('auth');
 Route::get('report','ReportController@index')->middleware('auth');
 Route::get('/report/commercial_invoice',  'ReportController@commercial_invoices')->middleware('auth');
 Route::get('/allreceipt', function () {

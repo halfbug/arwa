@@ -17,4 +17,8 @@ class bill extends Model
     {
         return $this->belongsTo('App\Challan','challan_id','id');
     }
+    public function gd()
+    {
+        return $this->belongsTo('App\GoodDeclaration','gd_id','id');
+    }
 }

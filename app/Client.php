@@ -46,6 +46,9 @@ class Client extends Model
     public function consignee() {
         return $this->hasMany('App\GoodDeclaration','consignee_id','id');
     }
+    public function importinvoices() {
+        return $this->hasMany('App\ImportInvoice','consignee_id','id');
+    }
 
 
 }

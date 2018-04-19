@@ -213,6 +213,9 @@
                         <a href="{{url('/goods')}}"><i class="fa fa-first-order fa-fw"></i>Goods Declaration</a>
                     </li>
                     <li>
+                        <a href="{{url('/importinvoice')}}"><i class="fa fa-first-order fa-fw"></i>Import Invoice</a>
+                    </li>
+                    <li>
                         <a href="{{url('/report')}}"><i class="fa fa-first-order fa-fw"></i>Reports</a>
                     </li>
                     {{--<li>

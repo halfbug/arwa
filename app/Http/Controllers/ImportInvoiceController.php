@@ -2,13 +2,11 @@
 
 namespace App\Http\Controllers;
 
+use App\ImportInvoice;
 use Illuminate\Http\Request;
-use App\Bill;
 use App\Client;
-use App\Challan;
-use App\GoodDeclaration;
 
-class BillController extends Controller
+class ImportInvoiceController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -17,8 +15,8 @@ class BillController extends Controller
      */
     public function index()
     {
-	$bill=Bill::all();
-	return view('bill.index',compact('bill'));
+	$impinv=ImportInvoice::all();
+	return view('importinvoice.index',compact('impinv'));
     }
 
     /**
@@ -28,10 +26,8 @@ class BillController extends Controller
      */
     public function create()
     {
-	    $gds=GoodDeclaration::all();
         $clients = Client::all();
-        $challan = Challan::all();
-        return view('bill.create', compact('clients','challan','gds'));
+        return view('importinvoice.create', compact('clients'));
     }
 
     /**
@@ -43,33 +39,27 @@ class BillController extends Controller
     public function store(Request $request)
     {
         request()->validate([
-            'date' => 'required',
-            'bill_no' => 'required',
-            'total_bill_amount' => 'required',
+            'totalinvoiceamount' => 'required',
+            'invoice_no' => 'required',
+            'invoice_date' => 'required',
         ]);
         $rec = $request->all();
-        $date=date_create($rec['date']);
+        $date=date_create($rec['invoice_date']);
         $format = date_format($date,"Y-m-d");
-        $rec['date'] = strtotime($format);
-        $date1=date_create($rec['arr_date']);
-        $format1 = date_format($date1,"Y-m-d");
-        $rec['arr_date'] = strtotime($format1);
-        //$rec['gd_id'] = 1;
+        $rec['invoice_date'] = strtotime($format);
 		
-        Bill::create($rec);
-
-
-        return redirect()->route('bill.index')
-            ->with('success','bill has been added successfully.');
+        ImportInvoice::create($rec);
+        return redirect()->route('importinvoice.index')
+            ->with('success','importinvoice added successfully.');
     }
 
     /**
      * Display the specified resource.
      *
-     * @param  int  $id
+     * @param  \App\ImportInvoice  $importInvoice
      * @return \Illuminate\Http\Response
      */
-    public function show($id)
+    public function show(ImportInvoice $importInvoice)
     {
         //
     }
@@ -77,10 +67,10 @@ class BillController extends Controller
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  int  $id
+     * @param  \App\ImportInvoice  $importInvoice
      * @return \Illuminate\Http\Response
      */
-    public function edit($id)
+    public function edit(ImportInvoice $importInvoice)
     {
         //
     }
@@ -89,10 +79,10 @@ class BillController extends Controller
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  int  $id
+     * @param  \App\ImportInvoice  $importInvoice
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(Request $request, ImportInvoice $importInvoice)
     {
         //
     }
@@ -100,13 +90,13 @@ class BillController extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param  int  $id
+     * @param  \App\ImportInvoice  $importInvoice
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Bill $bill)
+    public function destroy(ImportInvoice $importInvoice)
     {
-        $bill->delete();
-        return redirect()->route('bill.index')
-            ->with('success','bill deleted successfully');
+        $importInvoice->delete();
+        return redirect()->route('importinvoice.index')
+            ->with('success','Import Invoice deleted successfully');
     }
 }

@@ -41,6 +41,7 @@
 									<label><b>Select Client</b></label>
 
 									<select name="client_id" class="form-control">
+                                    <option value="">--select value--</option>
                                     @foreach($clients as $cli)
                                     <option value="{{ $cli->id }}">{{ $cli->company_name }}</option>
                                     @endforeach
@@ -51,8 +52,20 @@
 									<label><b>Select Challan for this bill</b></label>
 
 									<select name="challan_id" class="form-control">
-                                    @foreach($challan as $chal)
+                                     <option value="">--select value--</option>
+                                   @foreach($challan as $chal)
                                     <option value="{{ $chal->id }}">{{ $chal->challan_no }}</option>
+                                    @endforeach
+									</select>
+
+								</div>
+								<div class="form-group">
+									<label><b>Select gd for this bill</b></label>
+
+									<select name="gd_id" class="form-control">
+                                    <option value="">--select value--</option>
+									@foreach($gds as $gd)
+                                    <option value="{{ $gd->id }}">igm_egm_index({{ $gd->igm_egm_index }})/dry_port_igm_egm_index({{ $gd->dry_port_igm_egm_index }})</option>
                                     @endforeach
 									</select>
 
