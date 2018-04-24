@@ -131,7 +131,7 @@
                     <div class="row">
                         <div class="col-md-4"></div>
                         <div class="form-group col-md-4">
-                            <label for="goods_qty">goods_qty</label>
+                            <label for="goods_qty">QTY</label>
                             <input type="text" class="form-control" name="goods_qty">
                         </div>
                     </div>
@@ -140,6 +140,11 @@
                         <div class="form-group col-md-4">
                             <label for="goods_unit_price">goods_unit_price</label>
                             <input type="text" class="form-control" name="goods_unit_price">
+                            <select name="invoice_currency">
+							<option value="">select currency</option>
+							<option value="USD" selected>USD</option>
+							<option value="PkR">PKR</option>
+							</select>
                         </div>
                     </div>
                     <div class="row">
@@ -147,6 +152,11 @@
                         <div class="form-group col-md-4">
                             <label for="amount">amount</label>
                             <input type="text" class="form-control" name="amount">
+                            <select name="invoice_currency">
+							<option value="">select currency</option>
+							<option value="USD" selected>USD</option>
+							<option value="PkR">PKR</option>
+							</select>
                         </div>
                     </div>
                     <div class="row">

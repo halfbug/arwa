@@ -144,7 +144,7 @@
                                 </div>
                                 <div class="form-group">
                                     <label >Receipt date</label>
-                                    <input class="form-control" placeholder="" name="receiptno">
+                                    <input class="form-control" placeholder="" name="receiptdt" id="date2">
                                 </div>
                                 <div class="form-group">
                                     <label >Demurrage Charges</label>
@@ -397,6 +397,10 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.5.0/js/bootstrap-datepicker.js"></script>
     <script type="text/javascript">
         $('#date1').datepicker({
+            autoclose: true,
+            format: 'dd-mm-yyyy'
+        });
+        $('#date2').datepicker({
             autoclose: true,
             format: 'dd-mm-yyyy'
         });

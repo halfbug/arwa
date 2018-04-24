@@ -41,4 +41,9 @@ class order extends Model
     {
         return $this->belongsTo('App\Client', 'notify_party','id' );
     }
+	
+	public function containersinfo() {
+        return $this->hasMany('App\InfoOfContainer','order_id','id');
+    }
+
 }

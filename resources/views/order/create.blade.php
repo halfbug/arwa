@@ -60,6 +60,18 @@
                                     <input class="form-control" placeholder="Enter text" name="voyage_no">
                                 </div>
                                 <div class="form-group">
+                                    <label>Bill of landing no</label>
+                                    <input class="form-control" placeholder="Enter text" name="bill_landing_no">
+                                </div>
+                                <div class="form-group">
+                                    <label>Export Ref</label>
+                                    <input class="form-control" placeholder="Enter text" name="export_ref">
+                                </div>
+                                <div class="form-group">
+                                    <label>Booking No</label>
+                                    <input class="form-control" placeholder="Enter text" name="booking_no">
+                                </div>
+                                <div class="form-group">
                                     <label>Port of Loading</label>
                                     <input class="form-control" placeholder="Enter text" name="loading_at">
                                 </div>
@@ -118,17 +130,53 @@
 
                                 <div class="form-group">
                                     <label>Gross Weight</label>
-                                    <textarea class="form-control" rows="3" id="summernote1" name="gross_weight"></textarea>
+                                    <textarea class="form-control" id="" name="gross_weight"></textarea>
 
                                 </div>
 
                                 <div class="form-group">
                                     <label>Measurement</label>
-                                    <textarea class="form-control" rows="3" id="summernote2" name="measurement"></textarea>
+                                    <textarea class="form-control" id="" name="measurement"></textarea>
 
                                 </div>
-
-
+				<input type="hidden" name="contacts" id="contacts" value="1">	<div id="form-contacts-container" class="form-contacts-container">
+							<h3>Container 1</h3>
+								<div class="form-group">
+                                    <label>Freight & Charges</label>
+                                    <textarea class="form-control" id="" name="freight_charges"></textarea>
+                                </div>
+                                <div class="form-group">
+                                    <label>Revenue Terms</label>
+                                    <textarea class="form-control" id="" name="rev_terms"></textarea>
+                                </div>
+                                <div class="form-group">
+                                    <label>Rate</label>
+                                    <textarea class="form-control" id="" name="rate"></textarea>
+                                </div>
+                                <div class="form-group">
+                                    <label>Per</label>
+                                    <textarea class="form-control" id="" name="per"></textarea>
+                                </div>
+                                <div class="form-group">
+                                    <label>Amount</label>
+                                    <textarea class="form-control" id="" name="amount"></textarea>
+                                </div>
+                                <div class="form-group">
+                                    <label>Prepaid</label>
+                                    <textarea class="form-control" id="" name="prepaid"></textarea>
+                                </div>
+                                <div class="form-group">
+                                    <label>Collect</label>
+                                    <textarea class="form-control" id="" name="collect"></textarea>
+                                </div>
+                                <div class="form-group">
+                                    <label>Freight & Charges Payable at/by</label>
+                                    <textarea class="form-control" id="" name="f_c_payable_by"></textarea>
+                                </div>
+							</div><!--  toggle div-->
+    <div class="form-contacts-add">
+        <input type="button" value="Add More Container" id="add-fields">
+    </div>
 
 
 
@@ -162,10 +210,11 @@
 @endsection
 
 @section('script')
-    <script>
+
+<script>
 
     $('#summernote').summernote({
-        height: 450,
+        height: 200,
         toolbar: [
     // [groupName, [list of button]]
     ['style', ['bold', 'italic', 'underline', 'clear']],
@@ -177,7 +226,7 @@
     ]
     });
     $('#summernote1').summernote({
-        height: 200,
+        height: 100,
         toolbar: [
             // [groupName, [list of button]]
             ['style', ['bold', 'italic', 'underline', 'clear']],
@@ -189,7 +238,7 @@
         ]
     });
     $('#summernote2').summernote({
-        height: 200,
+        height: 100,
         toolbar: [
             // [groupName, [list of button]]
             ['style', ['bold', 'italic', 'underline', 'clear']],
@@ -271,4 +320,105 @@
             format: 'dd-mm-yyyy'
         });
         </script>
+		
+	<script type="text/javascript">
+    var total = 1; // Our default for how many contacts we have
+
+
+    $( document ).on( 'click', '#add-fields', function() {
+
+        var addBlockId = total = total + 1;
+		//console.log(addBlockId);
+        var addBlock = document.createElement('div');
+        $(addBlock).addClass('form-contact');
+        $(addBlock).attr('id','form-contact-' + addBlockId);
+console.log(total);
+        var inputName = document.createElement('input');
+        $(inputName).attr('type','text');
+        $(inputName).attr('class','form-control');
+        $(inputName).attr('name','freight_charges-' + addBlockId);
+        $(inputName).attr('id','freight_charges-' + addBlockId);
+        $(inputName).attr('placeholder','Freight & Charges');
+        $(inputName).appendTo($(addBlock));
+
+        var inputEmail = document.createElement('input');
+        $(inputEmail).attr('type','text');
+        $(inputEmail).attr('class','form-control');
+        $(inputEmail).attr('name','rev_terms-' + addBlockId);
+        $(inputEmail).attr('id','rev_terms-' + addBlockId);
+        $(inputEmail).attr('placeholder','Revenue Terms');
+		var nn="<br>";
+        $(nn).appendTo($(addBlock));
+        $(inputEmail).appendTo($(addBlock));
+
+        var inputPhone = document.createElement('input');
+        $(inputPhone).attr('type','text');
+        $(inputPhone).attr('class','form-control');
+        $(inputPhone).attr('name','rate-' + addBlockId);
+        $(inputPhone).attr('id','rate-' + addBlockId);
+        $(inputPhone).attr('placeholder','Rate');
+		var nn="<br>";
+        $(nn).appendTo($(addBlock));
+        $(inputPhone).appendTo($(addBlock));
+		
+        var inputPer = document.createElement('input');
+        $(inputPer).attr('type','text');
+        $(inputPer).attr('class','form-control');
+        $(inputPer).attr('name','per-' + addBlockId);
+        $(inputPer).attr('id','per-' + addBlockId);
+        $(inputPer).attr('placeholder','per');
+		var nn="<br>";
+        $(nn).appendTo($(addBlock));
+        $(inputPer).appendTo($(addBlock));
+		
+		var inputAmount = document.createElement('input');
+        $(inputAmount).attr('type','text');
+        $(inputAmount).attr('class','form-control');
+        $(inputAmount).attr('name','amount-' + addBlockId);
+        $(inputAmount).attr('id','amount-' + addBlockId);
+        $(inputAmount).attr('placeholder','amount');
+		var nn="<br>";
+        $(nn).appendTo($(addBlock));
+        $(inputAmount).appendTo($(addBlock));
+		
+        var inputPrepaid = document.createElement('input');
+        $(inputPrepaid).attr('type','text');
+        $(inputPrepaid).attr('class','form-control');
+        $(inputPrepaid).attr('name','prepaid-' + addBlockId);
+        $(inputPrepaid).attr('id','prepaid-' + addBlockId);
+        $(inputPrepaid).attr('placeholder','prepaid');
+		var nn="<br>";
+        $(nn).appendTo($(addBlock));
+        $(inputPrepaid).appendTo($(addBlock));
+		
+        var inputCollect = document.createElement('input');
+        $(inputCollect).attr('type','text');
+        $(inputCollect).attr('class','form-control');
+        $(inputCollect).attr('name','collect-' + addBlockId);
+        $(inputCollect).attr('id','collect-' + addBlockId);
+        $(inputCollect).attr('placeholder','collect');
+		var nn="<br>";
+        $(nn).appendTo($(addBlock));
+        $(inputCollect).appendTo($(addBlock));
+
+        var inputFcpayable = document.createElement('input');
+        $(inputFcpayable).attr('type','text');
+        $(inputFcpayable).attr('class','form-control');
+        $(inputFcpayable).attr('name','f_c_payable_by-' + addBlockId);
+        $(inputFcpayable).attr('id','f_c_payable_by-' + addBlockId);
+        $(inputFcpayable).attr('placeholder','Freight & Charges Payable at or by');
+		var nn="<br>";
+        $(nn).appendTo($(addBlock));
+        $(inputFcpayable).appendTo($(addBlock));
+
+		var newLine='<h3>Container '+ addBlockId +'</h3>';
+
+        $(newLine).appendTo($('.form-contacts-container'));
+        $(addBlock).appendTo($('.form-contacts-container'));
+        $('#contacts').val(total);
+
+    });
+
+</script>
+
 @endsection

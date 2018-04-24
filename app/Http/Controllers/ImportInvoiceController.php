@@ -47,6 +47,9 @@ class ImportInvoiceController extends Controller
         $date=date_create($rec['invoice_date']);
         $format = date_format($date,"Y-m-d");
         $rec['invoice_date'] = strtotime($format);
+        $date2=date_create($rec['receiptdt']);
+        $format2 = date_format($date2,"Y-m-d");
+        $rec['receiptdt'] = strtotime($format2);
 		
         ImportInvoice::create($rec);
         return redirect()->route('importinvoice.index')

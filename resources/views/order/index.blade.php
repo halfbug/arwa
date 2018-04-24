@@ -44,7 +44,7 @@
 
 
                                         <a class="btn btn-info" title="Invoice" href="{{ route('order.show',$order->id) }}"><i class="fa fa-file fa-fw"></i></a>
-                                        <a class="btn btn-primary" title="Edit" href="{{ route('order.edit',$order->id) }}"><i class="fa fa-edit fa-fw"></i></a>
+											{{--<a class="btn btn-primary" title="Edit" href="{{ route('order.edit',$order->id) }}"><i class="fa fa-edit fa-fw"></i></a>--}}
 
 
                                         @csrf

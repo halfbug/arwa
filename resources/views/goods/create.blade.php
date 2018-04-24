@@ -57,13 +57,15 @@
 
 								</div>
 								<div class="form-group">
-									<label><b>Select Challan for this bill</b></label>
+								<label><b>C.H.A.L no.</b></label>
+<!--									<label><b>Select Challan for this bill</b></label>
 
 									<select name="challan_id" class="form-control">
                                     @foreach($challan as $chal)
                                     <option value="{{ $chal->id }}">{{ $chal->challan_no }}</option>
                                     @endforeach
-									</select>
+									</select>-->
+                                    <input class="form-control" id="customfileno" placeholder="" name="challan_no">
 
 								</div>
                                 <div class="form-group">
