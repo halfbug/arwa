@@ -6,7 +6,7 @@
         <div class="row " style="background:#efefef;" >
             <div class="col-xs-6 col-md-4" >
                 <p><br>
-                    Invoice.No: <strong>{{-- $invoice->id --}}{{--str_pad( $order->id, 7, "0", STR_PAD_LEFT )--}}</strong>
+                    Total Agents {{ $totalagents }}<strong>{{-- $agent->id --}}{{--str_pad( $order->id, 7, "0", STR_PAD_LEFT )--}}</strong>
                     <br>
                     <i class="fa fa-envelope-o"></i> <strong> arwainternational@gmail.com</strong>
                     <br />
@@ -21,44 +21,32 @@
 			</div>
             <div class="col-xs-6 col-md-4">
                 <img src="{{url('images/Logo 2n.png')}}"  width="100%" height="100%"/></div>
-            <div class="col-xs-6 col-md-4 "> <h3 class="pull-right">Commercial Invoice Report</h3></div>
+            <div class="col-xs-6 col-md-4 "> <h3 class="pull-right">Custom Agents</h3></div>
 		</div>
 
 		    <div class="row">
 				        <table width="100%" class="table table-striped table-bordered table-hover" id="dataTables-example">
                         <thead>
                         <tr>
-                            <th>Invoice From</th>
-                            <th>Invoice Date</th>
-                            <th>Invoice#</th>
-                            <th>S/C_NC</th>
-                            <th>S/C_NC Date</th>
-                            <th>B/L_no</th>
-                            <th>countryoforigin</th>
-                            <th>container_no</th>
-                            <th>HScode</th>
-                            <th>goods_description</th>
-                            <th>goods_qty</th>
-                            <th>goods_unit_price</th>
-                            <th>amount</th>
+                            <th>Date</th>
+                             <th>Company Name</th>
+                           <th>email</th>
+                            <th>Company Phone/mobile</th>
+                            <th>ntn</th>
+                            <th>shipping_address</th>
+                            <th>billing_address</th>
                        </tr>
                         </thead>
                         <tbody>
-                        @foreach ($com_invoice as $invoice)
+                        @foreach ($agents as $agent)
 							<tr class="odd gradeX">
-                                <td>{{ucfirst($invoice->client->company_name)}} {{$invoice->client->first_name}} &nbsp; {{$invoice->client->last_name}}</td>
-                                <td>{{date('Y-m-d',$invoice->invoice_date)}}</td>
-                                <td>{{$invoice->invoice_no}}</td>
-                                <td class="center">{{--$invoice->S/C_NC--}}</td>
-                                <td>{{--$invoice->S/C_NC_date--}}</td>
-                                <td>{{--$invoice->B/L_no--}}</td>
-                                <td>{{$invoice->countryoforigin}}</td>
-                                <td>{{$invoice->container_no}}</td>
-                                <td>{{$invoice->HScode}}</td>
-                                <td>{{$invoice->goods_description}}</td>
-                                <td>{{$invoice->goods_qty}}</td>
-                                <td>{{$invoice->goods_unit_price}}</td>
-                                <td>{{$invoice->amount}}</td>
+                                 <td>{{--date('Y-m-d',$agent->created_at)--}}{{$agent->created_at}}</td>
+                               <td>{{ucfirst($agent->company_name)}} {{$agent->first_name}} &nbsp; {{$agent->last_name}}</td>
+                                <td>{{$agent->email}}</td>
+                                <td>{{$agent->company_phone}}, {{$agent->mobile}}</td>
+                                <td>{{$agent->ntn}}</td>
+                                <td>{{$agent->shipping_address}}</td>
+                                <td>{{$agent->billing_address}}</td>
                                 <td class="center">
                                     {{--<a href="tables.html"><i class="fa fa-file fa-fw"></i> </a>--}}
                                     {{--<a href="tables.html"><i class="fa fa-edit fa-fw"></i> </a>--}}

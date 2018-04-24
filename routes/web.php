@@ -51,6 +51,7 @@ Route::resource('goods','GoodDeclarationController')->middleware('auth');
 Route::resource('importinvoice','ImportInvoiceController')->middleware('auth');
 Route::get('report','ReportController@index')->middleware('auth');
 Route::get('/report/commercial_invoice',  'ReportController@commercial_invoices')->middleware('auth');
+Route::get('/report/custom_agents',  'ReportController@custom_agents')->middleware('auth');
 Route::get('/allreceipt', function () {
     return view('indexall');
 })->middleware('auth');
