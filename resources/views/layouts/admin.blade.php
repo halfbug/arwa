@@ -263,19 +263,21 @@
                         {{--</ul>--}}
                         {{--<!-- /.nav-second-level -->--}}
                     {{--</li>--}}
-                    <li>
+@if(Auth::check() && Auth::user()->is_admin == 1)
+						<li>
                         <a href="#"><i class="fa fa-wrench fa-fw"></i> Administration<span class="fa arrow"></span></a>
                         <ul class="nav nav-second-level">
                             <li>
-                                <a href="{{ route('register') }}">Register User</a>
+                                <a href="{{ route('adduser.create') }}">Register User</a>
                             </li>
                             <li>
-                                <a href="#">Users</a>
+                                <a href="{{ route('adduser.index') }}">Users</a>
                             </li>
 
                         </ul>
                         <!-- /.nav-second-level -->
                     </li>
+					@endif
                 </ul>
             </div>
             <!-- /.sidebar-collapse -->

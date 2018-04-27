@@ -32,7 +32,6 @@ Route::get('/vendor/add', function () {
 })->middleware('auth');
 
 
-
 Route::get('/currency-exchange', function () {
     return view('currencyExchange');
 })->middleware('auth');
@@ -49,6 +48,7 @@ Route::resource('cashreceipt','CashPaymentReceiptController')->middleware('auth'
 Route::resource('bill','BillController')->middleware('auth');
 Route::resource('goods','GoodDeclarationController')->middleware('auth');
 Route::resource('importinvoice','ImportInvoiceController')->middleware('auth');
+Route::resource('adduser','AddUserController')->middleware('auth');
 Route::get('report','ReportController@index')->middleware('auth');
 Route::get('/report/commercial_invoice',  'ReportController@commercial_invoices')->middleware('auth');
 Route::get('/report/custom_agents',  'ReportController@custom_agents')->middleware('auth');
