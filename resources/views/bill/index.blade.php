@@ -25,7 +25,7 @@
                         <thead>
                         <tr>
                             <th>Bill No.</th>
-                            <th>total_amount</th>
+                            <th>Client</th>
                             <th>Date</th>
 
                             <th >Options</th>
@@ -35,15 +35,15 @@
                         @foreach ($bill as $tax)
                             <tr class="odd gradeX">
                                 <td>{{$tax->bill_no}} </td>
-                                <td>{{$tax->total_bill_amount}}</td>
+                                <td>{{$tax->client}}</td>
                                 <td>{{date('Y-m-d',$tax->date)}}</td>
 
                                 <td class="center">
                                     <form action="{{ route('bill.destroy',$tax->id) }}" method="POST">
 
 
-                                        {{--<a class="btn btn-info" href="{{ route('client.show',$vendor->id) }}">Show</a>
-                                        <a class="btn btn-primary" href="{{ route('challan.edit',$tax->id) }}">Edit</a>--}}
+                                        <a class="btn btn-info" href="{{ route('bill.show',$tax->id) }}">Show</a>
+                                        <a class="btn btn-primary" href="{{ route('bill.edit',$tax->id) }}">Edit</a>
 
 
                                         @csrf

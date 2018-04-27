@@ -42,12 +42,12 @@ class BillController extends Controller
      */
     public function store(Request $request)
     {
-        request()->validate([
-            'date' => 'required',
-            'bill_no' => 'required',
-            'total_bill_amount' => 'required',
+/*         request()->validate([
+            'date' => 'required'
+//            'bill_no' => 'required',
+//            'total_bill_amount' => 'required',
         ]);
-        $rec = $request->all();
+ */        $rec = $request->all();
         $date=date_create($rec['date']);
         $format = date_format($date,"Y-m-d");
         $rec['date'] = strtotime($format);
@@ -69,9 +69,9 @@ class BillController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show($id)
+    public function show(Bill $bill)
     {
-        //
+        return view('bill.preview',compact('bill'));
     }
 
     /**
@@ -80,9 +80,9 @@ class BillController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function edit($id)
+    public function edit(Bill $bill)
     {
-        //
+        return view('bill.edit',compact('bill'));
     }
 
     /**
@@ -92,9 +92,18 @@ class BillController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(Request $request, Bill $bill)
     {
-        //
+		$rec=$request->all();
+        $date=date_create($rec['date']);
+        $format = date_format($date,"Y-m-d");
+        $rec['date'] = strtotime($format);
+        $date1=date_create($rec['arr_date']);
+        $format1 = date_format($date1,"Y-m-d");
+        $rec['arr_date'] = strtotime($format1);
+        $bill->update($rec);
+        return back()->with('success bill updated successfully.');
+
     }
 
     /**

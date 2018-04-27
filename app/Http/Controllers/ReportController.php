@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use Carbon\Carbon;
 use App\Client;
+use App\Commercial_invoice;
 class ReportController extends Controller
 {
     //

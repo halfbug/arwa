@@ -3,14 +3,15 @@
 @section('content')
     <div class="row">
         <div class="col-lg-12">
-            <h1 class="page-header">Add Bill<a href="{{ url('allreceipt') }}"id="btn_add" name="btn_add" class="btn btn-primary pull-right">Back to All Index</a></h1>
+            <h1 class="page-header">Edit Bill<a href="{{ url('bill') }}"id="btn_add" name="btn_add" class="btn btn-primary pull-right">Back to Bill Homepage</a></h1>
         </div>
         <!-- /.col-lg-12 -->
     </div>
     <!-- /.row -->
-    <form method="post" action="{{route('bill.store')}}" enctype="multipart/form-data">
+    <form method="post" action="{{route('bill.update',$bill->id)}}" enctype="multipart/form-data">
         @csrf
-        <div class="row">
+         @method('PUT')
+       <div class="row">
             <div class="col-lg-12">
                 <div class="panel panel-default">
                     <div class="panel-heading">
@@ -37,140 +38,107 @@
                                 </div>
                             @endif
                             <div class="col-lg-6">
-								<!--<div class="form-group">
-									<label><b>Select Client</b></label>
-
-									<select name="client_id" class="form-control">
-                                    <option value="">--select value--</option>
-                                    @foreach($clients as $cli)
-                                    <option value="{{ $cli->id }}">{{ $cli->company_name }}</option>
-                                    @endforeach
-									</select>
-
-								</div>
-								<div class="form-group">
-									<label><b>Select Challan for this bill</b></label>
-
-									<select name="challan_id" class="form-control">
-                                     <option value="">--select value--</option>
-                                   @foreach($challan as $chal)
-                                    <option value="{{ $chal->id }}">{{ $chal->challan_no }}</option>
-                                    @endforeach
-									</select>
-
-								</div>
-								<div class="form-group">
-									<label><b>Select gd for this bill</b></label>
-
-									<select name="gd_id" class="form-control">
-                                    <option value="">--select value--</option>
-									@foreach($gds as $gd)
-                                    <option value="{{ $gd->id }}">igm_egm_index({{ $gd->igm_egm_index }})/dry_port_igm_egm_index({{ $gd->dry_port_igm_egm_index }})</option>
-                                    @endforeach
-									</select>
-
-								</div>-->
                                 <div class="form-group">
                                     <label >Client of this Bill</label>
-                                    <input class="form-control" id="" placeholder="" name="client">
+                                    <input class="form-control" id="" value="{{$bill->client}}" name="client">
                                 </div>
                                 <div class="form-group">
                                     <label >Challan Number</label>
-                                    <input class="form-control" id="" placeholder="" name="challan">
+                                    <input class="form-control" id="" value="{{$bill->challan}}" name="challan">
                                 </div>
                                 <div class="form-group">
                                     <label >GD</label>
-                                    <input class="form-control" id="" placeholder="" name="gd">
+                                    <input class="form-control" id="" value="{{$bill->gd}}" name="gd">
                                 </div>
                                 <div class="form-group">
                                     <label >Date</label>
-                                    <input class="form-control" id="datepicker" placeholder="" name="date">
+                                    <input class="form-control" id="datepicker" value="{{date('Y-m-d',$bill->date)}}" name="date">
                                 </div>
 
                                 <div class="form-group">
                                     <label>bill_no</label>
-                                    <input class="form-control" id="bill_no" placeholder="" name="bill_no">
+                                    <input class="form-control" id="bill_no" value="{{$bill->bill_no}}" name="bill_no">
 
                                 </div>
                                  <div class="form-group">
                                     <label >bl_no.</label>
-                                    <input class="form-control" id="bl_no" placeholder="" name="bl_no">
+                                    <input class="form-control" id="bl_no" value="{{$bill->bl_no}}" name="bl_no">
                                 </div>
                                 <div class="form-group">
                                     <label>igm_no</label>
-                                    <input class="form-control" placeholder="Enter text" name="igm_no">
+                                    <input class="form-control" value="{{$bill->igm_no}}" name="igm_no">
                                 </div>
                                 <div class="form-group">
                                     <label>contract No.</label>
-                                    <input class="form-control" placeholder="Enter text" name="contract_no">
+                                    <input class="form-control" value="{{$bill->contract_no}}" name="contract_no">
                                 </div>
                                 <div class="form-group">
                                     <label>No. of Package</label>
-                                    <input class="form-control" placeholder="Enter text" name="no_of_packages">
+                                    <input class="form-control" value="{{$bill->no_of_packages}}" name="no_of_packages">
                                 </div>
                                 <div class="form-group">
                                     <label>description</label>
-                                    <input class="form-control" placeholder="Enter text" name="description">
+                                    <input class="form-control" value="{{$bill->description}}" name="description">
                                 </div>
                                 <div class="form-group">
                                     <label>per_s_s</label>
-                                    <input class="form-control" placeholder="Enter text" name="per_s_s">
+                                    <input class="form-control" value="{{$bill->per_s_s}}" name="per_s_s">
                                 </div>
                                 <div class="form-group">
                                     <label>arr_date</label>
-                                    <input class="form-control" placeholder="Enter text" name="arr_date" id="arr_date">
+                                    <input class="form-control" value="{{date('Y-m-d',$bill->arr_date)}}" name="arr_date" id="arr_date">
                                 </div>
                                 <div class="form-group">
                                     <label>from</label>
-                                    <input class="form-control" placeholder="Enter text" name="from">
+                                    <input class="form-control" value="{{$bill->from}}" name="from">
                                     <label>for</label>
-                                    <input class="form-control" placeholder="Enter text" name="for">
+                                    <input class="form-control" value="{{$bill->for}}" name="for">
 
                                 </div>
 
                                 <div class="form-group">
                                     <label >index_no</label>
-                                    <input class="form-control" placeholder="" name="index_no">
+                                    <input class="form-control" value="{{$bill->index_no}}" name="index_no">
                                 </div>
                                 <div class="form-group">
                                     <label >cash_no</label>
-                                    <input class="form-control" placeholder="" name="cash_no">
+                                    <input class="form-control" value="{{$bill->cash_no}}" name="cash_no">
                                 </div>
                                 <div class="form-group">
                                     <label >value of currency</label>
-                                    <input class="form-control" placeholder="" name="value_curr">
+                                    <input class="form-control" value="{{$bill->value_curr}}" name="value_curr">
                                 </div>
                                 <div class="form-group">
                                     <label >container_no</label>
-                                    <input class="form-control" placeholder="" name="container_no">
+                                    <input class="form-control" value="{{$bill->container_no}}" name="container_no">
                                 </div>
                                 <div class="form-group">
                                     <label >mandi_recipt</label>
-                                    <input class="form-control" placeholder="" name="mandi_recipt">
+                                    <input class="form-control" value="{{$bill->mandi_recipt}}" name="mandi_recipt">
                                 </div>
                                 <div class="form-group">
                                     <label >transportation</label>
-                                    <input class="form-control" placeholder="" name="transportation">
+                                    <input class="form-control" value="{{$bill->transportation}}" name="transportation">
                                 </div>
                                 <div class="form-group">
                                     <label >truck_detain</label>
-                                    <input class="form-control" placeholder="" name="truck_detain">
+                                    <input class="form-control" value="{{$bill->truck_detain}}" name="truck_detain">
                                 </div>
                                 <div class="form-group">
                                     <label >plant_PPRO</label>
-                                    <input class="form-control" placeholder="" name="plant_PPRO">
+                                    <input class="form-control" value="{{$bill->plant_PPRO}}" name="plant_PPRO">
                                 </div>
                                 <div class="form-group">
                                     <label >exm</label>
-                                    <input class="form-control" placeholder="" name="exm">
+                                    <input class="form-control" value="{{$bill->exm}}" name="exm">
                                 </div>
                                 <div class="form-group">
                                     <label >assemnt</label>
-                                    <input class="form-control" placeholder="" name="assemnt">
+                                    <input class="form-control" value="{{$bill->assemnt}}" name="assemnt">
                                 </div>
                                 <div class="form-group">
                                     <label >agency</label>
-                                    <input class="form-control" placeholder="" name="agency">
+                                    <input class="form-control" value="{{$bill->agency}}" name="agency">
                                 </div>
 
                             </div>
@@ -178,93 +146,93 @@
                             <div class="col-lg-6">
                                 <div class="form-group">
                                     <label>importduty_itax_salestax_info</label>
-                                    <textarea class="form-control" rows="2" style="height: 50px"  name="importduty_itax_salestax_info" id=""></textarea>
+                                    <textarea class="form-control" rows="2" style="height: 50px"  name="importduty_itax_salestax_info" id="">{{$bill->importduty_itax_salestax_info}}</textarea>
                                 </div>
                                 <div class="form-group">
                                     <label >importduty_itax_salestax_amount</label>
-                                    <input class="form-control" placeholder="amount of importduty_itax_salestax" name="importduty_itax_salestax_amount">
+                                    <input class="form-control" placeholder="amount of importduty_itax_salestax" name="importduty_itax_salestax_amount"value="{{$bill->importduty_itax_salestax_amount}}">
                                 </div>
                                 <div class="form-group">
                                     <label>detention_info</label>
-                                    <textarea class="form-control" rows="2" style="height: 50px"  name="detention_info" id=""></textarea>
+                                    <textarea class="form-control" rows="2" style="height: 50px"  name="detention_info" id="">{{$bill->detention_info}}</textarea>
                                 </div>
                                 <div class="form-group">
                                     <label >detention_amount</label>
-                                    <input class="form-control" placeholder="amount of detention_amount" name="detention_amount">
+                                    <input class="form-control" placeholder="amount of detention_amount" name="detention_amount"value="{{$bill->detention_amount}}">
                                 </div>
                                 <div class="form-group">
                                     <label >sales_tax Amount</label>
-                                    <input class="form-control" placeholder="" name="sales_tax">
+                                    <input class="form-control" value="{{$bill->sales_tax}}" name="sales_tax">
                                 </div>
                                 <div class="form-group">
                                     <label>weboc_token_info</label>
-                                    <textarea class="form-control" rows="2" style="height: 50px"  name="weboc_token_info" id=""></textarea>
+                                    <textarea class="form-control" rows="2" style="height: 50px"  name="weboc_token_info" id="">{{$bill->weboc_token_info}}</textarea>
                                 </div>
                                 <div class="form-group">
                                     <label >weboc_token_amount</label>
-                                    <input class="form-control" placeholder="amount of weboc_token" name="weboc_token_amount">
+                                    <input class="form-control" placeholder="amount of weboc_token" name="weboc_token_amount"value="{{$bill->weboc_token_amount}}">
                                 </div>
                                 <div class="form-group">
                                     <label>kict_info</label>
-                                    <textarea class="form-control" rows="2" style="height: 50px"  name="kict_info" id=""></textarea>
+                                    <textarea class="form-control" rows="2" style="height: 50px"  name="kict_info" id="">{{$bill->kict_info}}</textarea>
                                 </div>
                                 <div class="form-group">
                                     <label >kict_amount</label>
-                                    <input class="form-control" placeholder="amount of kict_amount" name="kict_amount">
+                                    <input class="form-control" placeholder="amount of kict_amount"value="{{$bill->kict_amount}}" name="kict_amount">
                                 </div>
                                 <div class="form-group">
                                     <label>plugging_detention_info</label>
-                                    <textarea class="form-control" rows="2" style="height: 50px"  name="plugging_detention_info" id=""></textarea>
+                                    <textarea class="form-control" rows="2" style="height: 50px"  name="plugging_detention_info" id="">{{$bill->plugging_detention_info}}</textarea>
                                 </div>
                                 <div class="form-group">
                                     <label >plugging_detention_amount</label>
-                                    <input class="form-control" placeholder="amount of plugging_detention_amount" name="plugging_detention_amount">
+                                    <input class="form-control" placeholder="amount of plugging_detention_amount" name="plugging_detention_amount"value="{{$bill->plugging_detention_amount}}">
                                 </div>
                                 <div class="form-group">
                                     <label>DO_info</label>
-                                    <textarea class="form-control" rows="2" style="height: 50px"  name="DO_info" id=""></textarea>
+                                    <textarea class="form-control" rows="2" style="height: 50px"  name="DO_info" id="">{{$bill->DO_info}}</textarea>
                                 </div>
                                 <div class="form-group">
                                     <label >DO_amount</label>
-                                    <input class="form-control" placeholder="amount of DO_amount" name="DO_amount">
+                                    <input class="form-control" placeholder="amount of DO_amount"value="{{$bill->DO_amount}}" name="DO_amount">
                                 </div>
                                 <div class="form-group">
                                     <label>excise_info</label>
-                                    <textarea class="form-control" rows="2" style="height: 50px"  name="excise_info" id=""></textarea>
+                                    <textarea class="form-control" rows="2" style="height: 50px"  name="excise_info" id="">{{$bill->excise_info}}</textarea>
                                 </div>
                                 <div class="form-group">
                                     <label >excise_amount</label>
-                                    <input class="form-control" placeholder="amount of excise_amount" name="excise_amount">
+                                    <input class="form-control" placeholder="amount of excise_amount"value="{{$bill->excise_amount}}" name="excise_amount">
                                 </div>
                                 <div class="form-group">
                                     <label>excise2_info</label>
-                                    <textarea class="form-control" rows="2" style="height: 50px"  name="excise2_info" id=""></textarea>
+                                    <textarea class="form-control" rows="2" style="height: 50px"  name="excise2_info" id="">{{$bill->excise2_info}}</textarea>
                                 </div>
                                 <div class="form-group">
                                     <label >excise2_amount</label>
-                                    <input class="form-control" placeholder="amount of excise2_amount" name="excise2_amount">
+                                    <input class="form-control" placeholder="amount of excise2_amount"value="{{$bill->excise2_amount}}" name="excise2_amount">
                                 </div>
                                 <div class="form-group">
                                     <label>plant_challan_info</label>
-                                    <textarea class="form-control" rows="2" style="height: 50px"  name="plant_challan_info" id=""></textarea>
+                                    <textarea class="form-control" rows="2" style="height: 50px"  name="plant_challan_info" id="">{{$bill->plant_challan_info}}</textarea>
                                 </div>
                                 <div class="form-group">
                                     <label >plant_challan_amount</label>
-                                    <input class="form-control" placeholder="amount of plant_challan" name="plant_challan_amount">
+                                    <input class="form-control" placeholder="amount of plant_challan" name="plant_challan_amount"value="{{$bill->plant_challan_amount}}">
                                 </div>
                                 <div class="form-group">
                                     <label >Total Bill Amount</label>
-                                    <input class="form-control" placeholder="numbers value only" name="total_bill_amount">
+                                    <input class="form-control" value="" name="total_bill_amount">
                                 </div>
                                 <div class="form-group">
                                     <label>advance</label>
-                                    <input class="form-control" placeholder="Enter text" name="advance">
+                                    <input class="form-control" value="{{$bill->advance}}" name="advance">
                                 </div>
 
 
                                 <div class="form-group">
                                     <label>balance</label>
-                                    <input class="form-control" placeholder="Enter text" name="balance">
+                                    <input class="form-control" value="{{$bill->balance}}" name="balance">
 
                                 </div>
 
