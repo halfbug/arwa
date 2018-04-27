@@ -98,7 +98,7 @@
                                 </div>
                                 <div class="form-group">
                                     <label>igm_no</label>
-                                    <input class="form-control" placeholder="Enter text" name="igm_no">
+                                    <input class="form-control" placeholder="Only numbers" name="igm_no">
                                 </div>
                                 <div class="form-group">
                                     <label>contract No.</label>
@@ -138,39 +138,39 @@
                                 </div>
                                 <div class="form-group">
                                     <label >value of currency</label>
-                                    <input class="form-control" placeholder="" name="value_curr">
+                                    <input class="form-control" placeholder="only numbers" name="value_curr">
                                 </div>
                                 <div class="form-group">
                                     <label >container_no</label>
-                                    <input class="form-control" placeholder="" name="container_no">
+                                    <input class="form-control" placeholder="only numbers" name="container_no">
                                 </div>
                                 <div class="form-group">
                                     <label >mandi_recipt</label>
-                                    <input class="form-control" placeholder="" name="mandi_recipt">
+                                    <input class="form-control" placeholder="only numbers" name="mandi_recipt">
                                 </div>
                                 <div class="form-group">
                                     <label >transportation</label>
-                                    <input class="form-control" placeholder="" name="transportation">
+                                    <input class="form-control" placeholder="only numbers" name="transportation">
                                 </div>
                                 <div class="form-group">
                                     <label >truck_detain</label>
-                                    <input class="form-control" placeholder="" name="truck_detain">
+                                    <input class="form-control" placeholder="only numbers" name="truck_detain">
                                 </div>
                                 <div class="form-group">
                                     <label >plant_PPRO</label>
-                                    <input class="form-control" placeholder="" name="plant_PPRO">
+                                    <input class="form-control" placeholder="only numbers" name="plant_PPRO">
                                 </div>
                                 <div class="form-group">
                                     <label >exm</label>
-                                    <input class="form-control" placeholder="" name="exm">
+                                    <input class="form-control" placeholder="only numbers" name="exm">
                                 </div>
                                 <div class="form-group">
                                     <label >assemnt</label>
-                                    <input class="form-control" placeholder="" name="assemnt">
+                                    <input class="form-control" placeholder="only numbers" name="assemnt">
                                 </div>
                                 <div class="form-group">
                                     <label >agency</label>
-                                    <input class="form-control" placeholder="" name="agency">
+                                    <input class="form-control" placeholder="only numbers" name="agency">
                                 </div>
 
                             </div>
@@ -194,7 +194,7 @@
                                 </div>
                                 <div class="form-group">
                                     <label >sales_tax Amount</label>
-                                    <input class="form-control" placeholder="" name="sales_tax">
+                                    <input class="form-control" placeholder="only numbers" name="sales_tax">
                                 </div>
                                 <div class="form-group">
                                     <label>weboc_token_info</label>

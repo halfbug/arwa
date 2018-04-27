@@ -3,7 +3,7 @@
 @section('content')
     <div class="row">
         <div class="col-lg-12">
-            <h1 class="page-header">Edit Bill<a href="{{ url('bill') }}"id="btn_add" name="btn_add" class="btn btn-primary pull-right">Back to Bill Homepage</a></h1>
+            <h1 class="page-header">Edit Bill   <a href="{{ url('bill.show') }}"id="btn_add" name="btn_add" class="btn btn-primary">Preview n print</a><a href="{{ url('bill') }}"id="btn_add" name="btn_add" class="btn btn-primary pull-right">Back to Bill Homepage</a></h1>
         </div>
         <!-- /.col-lg-12 -->
     </div>
@@ -222,7 +222,7 @@
                                 </div>
                                 <div class="form-group">
                                     <label >Total Bill Amount</label>
-                                    <input class="form-control" value="" name="total_bill_amount">
+                                    <input class="form-control" value="{{$bill->total_bill_amount}}" name="total_bill_amount">
                                 </div>
                                 <div class="form-group">
                                     <label>advance</label>
