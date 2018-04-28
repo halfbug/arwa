@@ -3,7 +3,7 @@
 @section('content')
     <div class="row">
         <div class="col-lg-12">
-            <h1 class="page-header">Add Bill<a href="{{ url('allreceipt') }}"id="btn_add" name="btn_add" class="btn btn-primary pull-right">Back to All Index</a></h1>
+            <h1 class="page-header">Add Bill<a href="{{ route('bill.index') }}"id="btn_add" name="btn_add" class="btn btn-primary pull-right">Back to All Bills</a></h1>
         </div>
         <!-- /.col-lg-12 -->
     </div>
@@ -146,31 +146,31 @@
                                 </div>
                                 <div class="form-group">
                                     <label >mandi_recipt</label>
-                                    <input class="form-control" placeholder="only numbers" name="mandi_recipt">
+                                    <input class="form-control" placeholder="only numbers" name="mandi_recipt" id="mandi_recipt" value=0>
                                 </div>
                                 <div class="form-group">
                                     <label >transportation</label>
-                                    <input class="form-control" placeholder="only numbers" name="transportation">
+                                    <input class="form-control" placeholder="only numbers" name="transportation" id="transportation" value=0>
                                 </div>
                                 <div class="form-group">
                                     <label >truck_detain</label>
-                                    <input class="form-control" placeholder="only numbers" name="truck_detain">
+                                    <input class="form-control" placeholder="only numbers" name="truck_detain" id="truck_detain" value=0>
                                 </div>
                                 <div class="form-group">
                                     <label >plant_PPRO</label>
-                                    <input class="form-control" placeholder="only numbers" name="plant_PPRO">
+                                    <input class="form-control" placeholder="only numbers" name="plant_PPRO" id="plant_PPRO" value=0>
                                 </div>
                                 <div class="form-group">
                                     <label >exm</label>
-                                    <input class="form-control" placeholder="only numbers" name="exm">
+                                    <input class="form-control" placeholder="only numbers" name="exm" id="exm" value=0>
                                 </div>
                                 <div class="form-group">
                                     <label >assemnt</label>
-                                    <input class="form-control" placeholder="only numbers" name="assemnt">
+                                    <input class="form-control" placeholder="only numbers" name="assemnt" id="assemnt" value=0>
                                 </div>
                                 <div class="form-group">
                                     <label >agency</label>
-                                    <input class="form-control" placeholder="only numbers" name="agency">
+                                    <input class="form-control" placeholder="only numbers" name="agency" id="agency" value=0>
                                 </div>
 
                             </div>
@@ -182,19 +182,7 @@
                                 </div>
                                 <div class="form-group">
                                     <label >importduty_itax_salestax_amount</label>
-                                    <input class="form-control" placeholder="amount of importduty_itax_salestax" name="importduty_itax_salestax_amount">
-                                </div>
-                                <div class="form-group">
-                                    <label>detention_info</label>
-                                    <textarea class="form-control" rows="2" style="height: 50px"  name="detention_info" id=""></textarea>
-                                </div>
-                                <div class="form-group">
-                                    <label >detention_amount</label>
-                                    <input class="form-control" placeholder="amount of detention_amount" name="detention_amount">
-                                </div>
-                                <div class="form-group">
-                                    <label >sales_tax Amount</label>
-                                    <input class="form-control" placeholder="only numbers" name="sales_tax">
+                                    <input class="form-control" placeholder="amount of importduty_itax_salestax" name="importduty_itax_salestax_amount" id="importduty_itax_salestax_amount" value=0>
                                 </div>
                                 <div class="form-group">
                                     <label>weboc_token_info</label>
@@ -202,7 +190,19 @@
                                 </div>
                                 <div class="form-group">
                                     <label >weboc_token_amount</label>
-                                    <input class="form-control" placeholder="amount of weboc_token" name="weboc_token_amount">
+                                    <input class="form-control" placeholder="amount of weboc_token" name="weboc_token_amount" id="weboc_token_amount" value=0>
+                                </div>
+                                <div class="form-group">
+                                    <label>detention_info</label>
+                                    <textarea class="form-control" rows="2" style="height: 50px"  name="detention_info" id=""></textarea>
+                                </div>
+                                <div class="form-group">
+                                    <label >detention_amount</label>
+                                    <input class="form-control" placeholder="amount of detention_amount" name="detention_amount" id="detention_amount" value=0>
+                                </div>
+                                <div class="form-group">
+                                    <label >sales_tax Amount</label>
+                                    <input class="form-control" placeholder="only numbers" name="sales_tax" id="sales_tax" value=0>
                                 </div>
                                 <div class="form-group">
                                     <label>kict_info</label>
@@ -210,7 +210,7 @@
                                 </div>
                                 <div class="form-group">
                                     <label >kict_amount</label>
-                                    <input class="form-control" placeholder="amount of kict_amount" name="kict_amount">
+                                    <input class="form-control" placeholder="amount of kict_amount" name="kict_amount" id="kict_amount" value=0>
                                 </div>
                                 <div class="form-group">
                                     <label>plugging_detention_info</label>
@@ -218,7 +218,7 @@
                                 </div>
                                 <div class="form-group">
                                     <label >plugging_detention_amount</label>
-                                    <input class="form-control" placeholder="amount of plugging_detention_amount" name="plugging_detention_amount">
+                                    <input class="form-control" placeholder="amount of plugging_detention_amount" name="plugging_detention_amount" id="plugging_detention_amount" value=0>
                                 </div>
                                 <div class="form-group">
                                     <label>DO_info</label>
@@ -226,7 +226,7 @@
                                 </div>
                                 <div class="form-group">
                                     <label >DO_amount</label>
-                                    <input class="form-control" placeholder="amount of DO_amount" name="DO_amount">
+                                    <input class="form-control" placeholder="amount of DO_amount" name="DO_amount" id="DO_amount" value=0>
                                 </div>
                                 <div class="form-group">
                                     <label>excise_info</label>
@@ -234,7 +234,7 @@
                                 </div>
                                 <div class="form-group">
                                     <label >excise_amount</label>
-                                    <input class="form-control" placeholder="amount of excise_amount" name="excise_amount">
+                                    <input class="form-control" placeholder="amount of excise_amount" name="excise_amount" id="excise_amount" value=0>
                                 </div>
                                 <div class="form-group">
                                     <label>excise2_info</label>
@@ -242,7 +242,7 @@
                                 </div>
                                 <div class="form-group">
                                     <label >excise2_amount</label>
-                                    <input class="form-control" placeholder="amount of excise2_amount" name="excise2_amount">
+                                    <input class="form-control" placeholder="amount of excise2_amount" name="excise2_amount" id="excise2_amount" value=0>
                                 </div>
                                 <div class="form-group">
                                     <label>plant_challan_info</label>
@@ -250,21 +250,21 @@
                                 </div>
                                 <div class="form-group">
                                     <label >plant_challan_amount</label>
-                                    <input class="form-control" placeholder="amount of plant_challan" name="plant_challan_amount">
+                                    <input class="form-control" placeholder="amount of plant_challan" name="plant_challan_amount" id="plant_challan_amount" value=0>
                                 </div>
                                 <div class="form-group">
                                     <label >Total Bill Amount</label>
-                                    <input class="form-control" placeholder="numbers value only" name="total_bill_amount">
+                                    <input class="form-control" placeholder="numbers value only" id="total_bill_amount" name="total_bill_amount">
                                 </div>
                                 <div class="form-group">
                                     <label>advance</label>
-                                    <input class="form-control" placeholder="Enter text" name="advance">
+                                    <input class="form-control" placeholder="Enter text" name="advance" id="advance" value=0>
                                 </div>
 
 
                                 <div class="form-group">
                                     <label>balance</label>
-                                    <input class="form-control" placeholder="Enter text" name="balance">
+                                    <input class="form-control" placeholder="Enter text" name="balance" id="balance">
 
                                 </div>
 
@@ -298,11 +298,56 @@
 @endsection
 
 @section('script')
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.5.0/js/bootstrap-datepicker.js"></script>
+<script>
+$(document).ready(function() {
+    //this calculates values automatically 
+   //sum();
+    $("#importduty_itax_salestax_amount, #weboc_token_amount,#sales_tax,#detention_amount,#kict_amount,#plugging_detention_amount,#DO_amount,#excise_amount,#excise2_amount,#plant_challan_amount,#mandi_recipt,#transportation,#truck_detain,#plant_PPRO,#exm,#assemnt,#agency,#advance").on("keydown keyup", function() {
+        sum();
+    });
+});
+
+function sum() {
+	
+      	var num1 = document.getElementById('importduty_itax_salestax_amount').value;
+            var num2 = document.getElementById('weboc_token_amount').value;
+            var num3 = document.getElementById('sales_tax').value;
+            var num4 = document.getElementById('detention_amount').value;
+            var num5 = document.getElementById('kict_amount').value;
+            var num6 = document.getElementById('plugging_detention_amount').value;
+            var num7 = document.getElementById('DO_amount').value;
+            var num8 = document.getElementById('excise_amount').value;
+            var num9 = document.getElementById('excise2_amount').value;
+            var num11 = document.getElementById('plant_challan_amount').value;
+            var num12 = document.getElementById('mandi_recipt').value;
+            var num13 = document.getElementById('transportation').value;
+            var num14 = document.getElementById('truck_detain').value;
+            var num15 = document.getElementById('plant_PPRO').value;
+            var num16 = document.getElementById('exm').value;
+            var num17 = document.getElementById('assemnt').value;
+            var num18 = document.getElementById('agency').value;
+            
+			var advance = document.getElementById('advance').value;
+            var advance = parseInt(advance);
+			
+			var total = parseInt(num1) + parseInt(num2) + parseInt(num3) + parseInt(num4) + parseInt(num5) + parseInt(num6) + parseInt(num7) + parseInt(num8) + parseInt(num9) + parseInt(num11) + parseInt(num12) + parseInt(num13) + parseInt(num14) + parseInt(num15) + parseInt(num16) + parseInt(num17) + parseInt(num18);
+			var total = parseInt(total);
+			var balance = total - advance;
+ console.log(total);          
+				document.getElementById('balance').value = parseInt(balance);
+ 			   document.getElementById('total_bill_amount').value = total;
+          if (!isNaN(total)) {
+			   document.getElementById('total_bill_amount').value = total;
+				//document.getElementById('balance').value = balance;
+            }
+        }
+</script> 
+<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.5.0/js/bootstrap-datepicker.js"></script>
     <script type="text/javascript">
         $('#datepicker').datepicker({
             autoclose: true,
-            format: 'dd-mm-yyyy'
+
+format: 'dd-mm-yyyy'
         });
         $('#arr_date').datepicker({
             autoclose: true,
