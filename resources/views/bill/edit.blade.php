@@ -114,31 +114,31 @@
                                 </div>
                                 <div class="form-group">
                                     <label >mandi_recipt</label>
-                                    <input class="form-control" value="{{$bill->mandi_recipt}}" name="mandi_recipt">
+                                    <input class="form-control prc" value="{{$bill->mandi_recipt}}" name="mandi_recipt">
                                 </div>
                                 <div class="form-group">
                                     <label >transportation</label>
-                                    <input class="form-control" value="{{$bill->transportation}}" name="transportation">
+                                    <input class="form-control prc" value="{{$bill->transportation}}" name="transportation">
                                 </div>
                                 <div class="form-group">
                                     <label >truck_detain</label>
-                                    <input class="form-control" value="{{$bill->truck_detain}}" name="truck_detain">
+                                    <input class="form-control prc" value="{{$bill->truck_detain}}" name="truck_detain">
                                 </div>
                                 <div class="form-group">
                                     <label >plant_PPRO</label>
-                                    <input class="form-control" value="{{$bill->plant_PPRO}}" name="plant_PPRO">
+                                    <input class="form-control prc" value="{{$bill->plant_PPRO}}" name="plant_PPRO">
                                 </div>
                                 <div class="form-group">
                                     <label >exm</label>
-                                    <input class="form-control" value="{{$bill->exm}}" name="exm">
+                                    <input class="form-control prc" value="{{$bill->exm}}" name="exm">
                                 </div>
                                 <div class="form-group">
                                     <label >assemnt</label>
-                                    <input class="form-control" value="{{$bill->assemnt}}" name="assemnt">
+                                    <input class="form-control prc" value="{{$bill->assemnt}}" name="assemnt">
                                 </div>
                                 <div class="form-group">
                                     <label >agency</label>
-                                    <input class="form-control" value="{{$bill->agency}}" name="agency">
+                                    <input class="form-control prc" value="{{$bill->agency}}" name="agency">
                                 </div>
 
                             </div>
@@ -150,7 +150,7 @@
                                 </div>
                                 <div class="form-group">
                                     <label >importduty_itax_salestax_amount</label>
-                                    <input class="form-control" placeholder="amount of importduty_itax_salestax" name="importduty_itax_salestax_amount"value="{{$bill->importduty_itax_salestax_amount}}">
+                                    <input class="form-control prc" placeholder="amount of importduty_itax_salestax" name="importduty_itax_salestax_amount"value="{{$bill->importduty_itax_salestax_amount}}">
                                 </div>
                                 <div class="form-group">
                                     <label>detention_info</label>
@@ -158,11 +158,11 @@
                                 </div>
                                 <div class="form-group">
                                     <label >detention_amount</label>
-                                    <input class="form-control" placeholder="amount of detention_amount" name="detention_amount"value="{{$bill->detention_amount}}">
+                                    <input class="form-control prc" placeholder="amount of detention_amount" name="detention_amount"value="{{$bill->detention_amount}}">
                                 </div>
                                 <div class="form-group">
                                     <label >sales_tax Amount</label>
-                                    <input class="form-control" value="{{$bill->sales_tax}}" name="sales_tax">
+                                    <input class="form-control prc" value="{{$bill->sales_tax}}" name="sales_tax">
                                 </div>
                                 <div class="form-group">
                                     <label>weboc_token_info</label>
@@ -170,7 +170,7 @@
                                 </div>
                                 <div class="form-group">
                                     <label >weboc_token_amount</label>
-                                    <input class="form-control" placeholder="amount of weboc_token" name="weboc_token_amount"value="{{$bill->weboc_token_amount}}">
+                                    <input class="form-control prc" placeholder="amount of weboc_token" name="weboc_token_amount"value="{{$bill->weboc_token_amount}}">
                                 </div>
                                 <div class="form-group">
                                     <label>kict_info</label>
@@ -178,7 +178,7 @@
                                 </div>
                                 <div class="form-group">
                                     <label >kict_amount</label>
-                                    <input class="form-control" placeholder="amount of kict_amount"value="{{$bill->kict_amount}}" name="kict_amount">
+                                    <input class="form-control prc" placeholder="amount of kict_amount"value="{{$bill->kict_amount}}" name="kict_amount">
                                 </div>
                                 <div class="form-group">
                                     <label>plugging_detention_info</label>
@@ -186,7 +186,7 @@
                                 </div>
                                 <div class="form-group">
                                     <label >plugging_detention_amount</label>
-                                    <input class="form-control" placeholder="amount of plugging_detention_amount" name="plugging_detention_amount"value="{{$bill->plugging_detention_amount}}">
+                                    <input class="form-control prc" placeholder="amount of plugging_detention_amount" name="plugging_detention_amount"value="{{$bill->plugging_detention_amount}}">
                                 </div>
                                 <div class="form-group">
                                     <label>DO_info</label>
@@ -194,7 +194,7 @@
                                 </div>
                                 <div class="form-group">
                                     <label >DO_amount</label>
-                                    <input class="form-control" placeholder="amount of DO_amount"value="{{$bill->DO_amount}}" name="DO_amount">
+                                    <input class="form-control prc" placeholder="amount of DO_amount"value="{{$bill->DO_amount}}" name="DO_amount">
                                 </div>
                                 <div class="form-group">
                                     <label>excise_info</label>
@@ -202,7 +202,7 @@
                                 </div>
                                 <div class="form-group">
                                     <label >excise_amount</label>
-                                    <input class="form-control" placeholder="amount of excise_amount"value="{{$bill->excise_amount}}" name="excise_amount">
+                                    <input class="form-control prc" placeholder="amount of excise_amount"value="{{$bill->excise_amount}}" name="excise_amount">
                                 </div>
                                 <div class="form-group">
                                     <label>excise2_info</label>
@@ -210,7 +210,7 @@
                                 </div>
                                 <div class="form-group">
                                     <label >excise2_amount</label>
-                                    <input class="form-control" placeholder="amount of excise2_amount"value="{{$bill->excise2_amount}}" name="excise2_amount">
+                                    <input class="form-control prc" placeholder="amount of excise2_amount"value="{{$bill->excise2_amount}}" name="excise2_amount">
                                 </div>
                                 <div class="form-group">
                                     <label>plant_challan_info</label>
@@ -218,21 +218,21 @@
                                 </div>
                                 <div class="form-group">
                                     <label >plant_challan_amount</label>
-                                    <input class="form-control" placeholder="amount of plant_challan" name="plant_challan_amount"value="{{$bill->plant_challan_amount}}">
+                                    <input class="form-control prc" placeholder="amount of plant_challan" name="plant_challan_amount"value="{{$bill->plant_challan_amount}}">
                                 </div>
                                 <div class="form-group">
                                     <label >Total Bill Amount</label>
-                                    <input class="form-control" value="{{$bill->total_bill_amount}}" name="total_bill_amount">
+                                    <input class="form-control" value="{{$bill->total_bill_amount}}" name="total_bill_amount" id="total_bill_amount">
                                 </div>
                                 <div class="form-group">
                                     <label>advance</label>
-                                    <input class="form-control" value="{{$bill->advance}}" name="advance">
+                                    <input class="form-control" value="{{$bill->advance}}" name="advance" id="advance">
                                 </div>
 
 
                                 <div class="form-group">
                                     <label>balance</label>
-                                    <input class="form-control" value="{{$bill->balance}}" name="balance">
+                                    <input class="form-control" value="{{$bill->balance}}" name="balance" id="balance">
 
                                 </div>
 
@@ -266,6 +266,44 @@
 @endsection
 
 @section('script')
+<script>
+$(document).ready(function () {
+ 	var total=0;
+	var bal=0;
+	var adv=0;
+	//var adv=$('#advance').val();
+	var adv=document.getElementById('advance').value;
+	//console.log(adv);
+	$('.form-group .prc').each(function(){
+    
+	var inputval=$(this).val();
+	if($.isNumeric(inputval)){
+	total+=parseInt(inputval);
+	}//if
+	});
+	total=parseInt(total);
+	bal=total-parseInt(adv);
+	$('#total_bill_amount').val(total);
+	$('#balance').val(bal);
+ });
+
+$('.form-group').on('input','.form-control',function(){
+	var total=0;
+	var bal=0;
+   // console.log(total);
+	var adv=$('#advance').val();
+	$('.form-group .prc').each(function(){
+	var inputval=$(this).val();
+	if($.isNumeric(inputval)){
+	total+=parseInt(inputval);
+	}//if
+	});
+	total=parseInt(total);
+	bal=total-parseInt(adv);
+	$('#total_bill_amount').val(total);
+	$('#balance').val(bal);
+});
+</script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.5.0/js/bootstrap-datepicker.js"></script>
     <script type="text/javascript">
         $('#datepicker').datepicker({
