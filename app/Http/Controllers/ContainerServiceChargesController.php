@@ -5,7 +5,6 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Client;
 use App\ContainerServiceCharges;
-
 class ContainerServiceChargesController extends Controller
 {
     /**
@@ -15,8 +14,9 @@ class ContainerServiceChargesController extends Controller
      */
     public function index()
     {
-        //
-    }
+	$csc=ContainerServiceCharges::all();
+	return view('csc.index', compact('csc'));    
+	}
 
     /**
      * Show the form for creating a new resource.
@@ -25,7 +25,8 @@ class ContainerServiceChargesController extends Controller
      */
     public function create()
     {
-        //
+	$clients=Client::all();
+	return view('csc.create', compact('clients'));    
     }
 
     /**
@@ -36,8 +37,22 @@ class ContainerServiceChargesController extends Controller
      */
     public function store(Request $request)
     {
-        //
-    }
+        $rec = $request->all();
+        $date=date_create($rec['arr_date']);
+        $format = date_format($date,"Y-m-d");
+        $rec['arr_date'] = strtotime($format);
+        $date1=date_create($rec['gate_in']);
+        $format1 = date_format($date1,"Y-m-d");
+        $rec['gate_in'] = strtotime($format1);
+        $date2=date_create($rec['gate_out']);
+        $format2 = date_format($date2,"Y-m-d");
+        $rec['gate_out'] = strtotime($format2);
+		
+        ContainerServiceCharges::create($rec);
+
+
+        return redirect()->route('csc.index')
+            ->with('success','ContainerServiceCharges has been added successfully.');    }
 
     /**
      * Display the specified resource.
@@ -45,9 +60,9 @@ class ContainerServiceChargesController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show($id)
+    public function show(ContainerServiceCharges $csc)
     {
-        //
+	return view('csc.preview', compact('csc'));    
     }
 
     /**

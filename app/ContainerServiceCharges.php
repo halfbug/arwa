@@ -18,6 +18,6 @@ class containerServiceCharges extends Model
  */
       public function agentofcontainer()
     {
-        return $this->belongsTo('App\Clients','cf_agent','id');
+        return $this->belongsTo('App\Client','cf_agent','id');
     }
 }

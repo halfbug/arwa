@@ -49,6 +49,9 @@ class Client extends Model
     public function importinvoices() {
         return $this->hasMany('App\ImportInvoice','consignee_id','id');
     }
+    public function agentofcontainer() {
+        return $this->hasMany('App\ContainerServiceCharges','cf_agent','id');
+    }
 
 
 }
